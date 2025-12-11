@@ -1,0 +1,13 @@
+# Python Virtual Environment
+.venv/
+venv/
+__pycache__/
+
+# Dependencies (자동 생성 파일)
+*.pyc
+
+# IDE files (선택)
+.vscode/
+.idea/
+
+.env
