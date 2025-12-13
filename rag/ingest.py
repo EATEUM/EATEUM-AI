@@ -3,7 +3,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from langchain_community.document_loaders import DataFrameLoader
 from langchain_openai import OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from langchain_core.documents import Document
 
 # 1. .env 파일 로드
@@ -17,7 +17,7 @@ print(f"🔑 Key Loaded: {api_key[:5]}*****")
 print(f"🌐 Base URL: {api_base}")
 
 # 2. 데이터 로드
-csv_path = "data/recipes_data.csv" 
+csv_path = "../data/recipes_test.csv" 
 try:
     df = pd.read_csv(csv_path)
     # 컬럼 공백 제거 (안전장치)
