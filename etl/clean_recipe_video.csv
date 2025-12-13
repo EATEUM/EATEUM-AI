@@ -1,0 +1,3 @@
+﻿recipe_video_id,video_title,video_url,thumbnail_url,view_count,category_id,dish_name,youtube_video_id,last_search_at,created_at,updated_at
+1,떡볶이,http://url1,http://img1,조회수 1444만회,1,떡볶이,,2025-12-13 19:24:15.248893,2025-12-13 19:24:15.248992,2025-12-13 19:24:15.249054
+2,김치찌개,http://url2,http://img2,조회수 100만회,2,김치찌개,,2025-12-13 19:24:15.248893,2025-12-13 19:24:15.248992,2025-12-13 19:24:15.249054
