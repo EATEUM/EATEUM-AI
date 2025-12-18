@@ -1,5 +1,5 @@
 ﻿recipe_video_id,video_title,category_name,item_name,video_url
-1,한국 길거리 음식 NO.1 떡볶이,분식,"떡, 양배추, 파, 댤걀, 어묵, 고추장, 고춧가루, 간장, 설탕, 깻잎",https://www.youtube.com/watch?v=t4Es8mwdYlE
+1,한국 길거리 음식 NO.1 떡볶이,분식,"떡, 양배추, 파, 달걀, 어묵, 고추장, 고춧가루, 간장, 설탕, 깻잎",https://www.youtube.com/watch?v=t4Es8mwdYlE
 2,양배추전으로 살 10kg 그냥 뺍니다,한식,"양배추, 파, 당근, 튀김가루, 부침가루",https://www.youtube.com/watch?v=cUQzxhmYdGs
 3,달걀로 만두를 어떻게 만들지?,한식,"당면, 파, 고추, 달걀, 소금, 참기름, 후추, 설탕, 간장",https://youtu.be/5-a5CPASYBc?si=EkO5CCdPZNwYZxOd
 4,[어남선생] 떡볶이는 이제 평생 이 간단 레시피면 끝!,분식,"떡, 어묵, 파, 고춧가루, 고추장, 간장, 굴소스, 후추",https://www.youtube.com/watch?v=xtW8mjglyfY
@@ -13,9 +13,9 @@
 12,5분이면 끝나는 비빕밥,한식,"밥, 애호박, 콩나물, 당근, 표고버섯, 고추장, 간장, 달걀, 김, 깨",https://youtu.be/Jq2SwKMw8vI?si=bxivWeGjSLBEjUMz
 13,풍미를 살리는 비빔국수 비법!,한식,"소면, 오이, 고추장, 고춧가루, 설탕, 매실액, 간장, 굴소스, 마늘, 미림, 깨, 땅콩버터, 참기름",https://youtu.be/JALXIHKui7U?si=NqZMS7OkowyZAwSh
 14,현지맛 가득한 고기짬뽕라면!,중식,"양파, 애호박, 고추, 돼지고기, 고춧가루, 라면, 굴소스, 파, 마늘",https://youtu.be/FbdC6KmYgis?si=g9UtfBR9FXmzLJQv
-15,삼겹살 부타동 : 고기 덮밥의 완결판,일식,"간장, 미림, 맛, 다시마, 가쓰오부시, 설탕, 마늘, 후추",https://youtu.be/pRMcKH6p92U?si=Qftz2fuZwh8i2TSj
+15,삼겹살 부타동 : 고기 덮밥의 완결판,일식,"간장, 미림, 맛술, 다시마, 가쓰오부시, 설탕, 마늘, 후추",https://youtu.be/pRMcKH6p92U?si=Qftz2fuZwh8i2TSj
 16,된장찌개 하나로 빌딩을 세운 전설의 맛,한식,"소고기, 파, 두부, 부추, 된장, 고춧가루, 멸치액젓, 미림, 고추",https://youtu.be/T4ylPWlBaRA?si=FEQy5Ju7p1Lhck4x
-17,[어남선생] 만원 갈비찜,한식,"돼지고기, 간장 설탕, 식초, 고춧가루, 후추",https://youtu.be/VXd_1jrlgNw?si=qKmNVLSQfbtLZD4l
+17,[어남선생] 만원 갈비찜,한식,"돼지고기, 간장, 설탕, 식초, 고춧가루, 후추",https://youtu.be/VXd_1jrlgNw?si=qKmNVLSQfbtLZD4l
 18,당신의 혀를 유린하는 : 유린기,중식,"닭, 소금, 식초, 후추, 굴소스, 감자, 옥수수, 마요네즈, 간장, 설탕, 마늘, 파, 고추",https://youtu.be/cMVqrDbK41c?si=bfqfrgWnhRMG_aMz
 19,대패삽겹살 두루치기,한식,"삼겹살, 양파, 파, 고추, 마늘, 깨, 고추장, 고춧가루, 맛술, 간장, 설탕, 물엿, 후추, 생강, 마늘",https://youtu.be/karvaPE3PgQ?si=-t_shrgbaX2SmVGV
 20,김치나베돈까스,일식,"김치, 돼지고기, 달걀, 간장, 설탕",https://youtu.be/qp_kMDWdE2c?si=FnU8iTlWWweYN2J7
@@ -45,3 +45,17 @@
 44,5분만에 만드는 탕수육,중식,"돼지고기, 전분, 소금, 후추, 후르츠칵테일, 간장, 식초, 전분",https://www.youtube.com/watch?v=nCzUhrYE4vI&t=1s
 45,1분만에 만드는 초간단 라볶이,분식,"라면, 파, 설탕, 고추장",https://www.youtube.com/watch?v=6e-IbuuD6ZU
 46,바삭바삭 [김치부침개] 앞으로 김치전은 이렇게,한식,"김치, 밀가루, 고춧가루, 맛소금, 후",https://www.youtube.com/watch?v=dj254ORKR30
+47,밥 대신 먹으면 살이 빠지는 토마토 계란 두부 볶음밥,중식,"두부, 토마토, 달걀, 파, 소금, 굴소스, 케찹",https://www.youtube.com/watch?v=h10MlTeRIkY
+48,전문점보다 맛있는 스팸마요 덮밥,분식,"스팸, 달걀, 밥, 마요네즈, 김, 간장, 설탕",https://www.youtube.com/watch?v=dtYexNnsGvI
+49,라이스 페이퍼 떡볶이,분식,"라이스페이퍼, 어묵, 치즈, 고추장, 고춧가루, 간장, 설탕",https://www.youtube.com/watch?v=KLwB9BVxzGg
+50,[이연복] 새우 볶음밥,중식,"밥, 새우, 달걀, 파, 당근, 소금, 굴소스",https://www.youtube.com/watch?v=11lVLe1vnb0
+51,탄탄면을 집에서?,중식,"우동면, 돼지고기, 숙주, 청경채, 파, 마늘, 고춧가루, 진간장, 굴소스, 땅콩버터, 식초",https://www.youtube.com/watch?v=lIDumw40-ko
+52,[성시경 레시피] 가지 덮밥,중식,"가지, 돼지고기, 소고기, 파, 양파, 고추, 밥, 굴소스, 두반장, 간장, 맛술, 치킨스톡, 마늘, 전분, 소금, 참기름",https://www.youtube.com/watch?v=06OnVwhhkbE
+53,하루가 지나도 절대 불지 않는 잡채 만들기,한식,"당면, 양파, 당근, 표고버섯, 부추, 간장, 미림, 굴소스, 설탕, 마늘, 참기름, 깨, 후추",https://www.youtube.com/watch?v=vqb3WyZmL_8
+54,[이연복] 크림 새우,중식,"새우, 튀김가루, 양상추, 마요네즈, 생크림, 레몬, 설탕, 소금",https://www.youtube.com/watch?v=zB951RGv1EI
+55,[이연복] 고추 잡채,중식,"소고기, 피망, 양파, 표고버섯, 고추, 죽순채, 전분, 달걀, 간장, 소금, 굴소스",https://www.youtube.com/watch?v=sFLGovdEBr4
+56,초간단 대패삼겹살배추찜,한식,"배추, 돼지고기, 소금, 후추, 미림, 설탕, 식초, 고춧가루, 쯔유",https://www.youtube.com/watch?v=5DDYEX14r4E
+57,도시락싸기 추천메뉴 스팸마요주먹밥 만들기,분식,"스팸, 밥, 달걀, 간장, 설탕, 마요네즈, 김, 참기름",https://www.youtube.com/watch?v=9cGWDBYaL2o
+58,포장마차 어묵탕 만들기,분식,"어묵, 무, 양파, 파, 고추, 미원, 후추, 멸치액젓, 멸치, 다시마",https://www.youtube.com/watch?v=mJKVKTLN1CA
+59,[성시경 레시피] 소떡소떡,분식,"소시지, 떡, 초장, 마늘, 고춧가루, 후추, 깨, 메이플시럽",https://www.youtube.com/watch?v=hw6w9HFwOEY
+60,[전문점 따라잡기] 평생 써먹는 잔치국수 레시피 팔아도 됩니다,한식,"무, 양파, 파, 다시마, 멸치, 새우, 마늘, 소면, 애호박, 달걀, 깨, 후추, 김, 김치, 쯔유",http://youtube.com/watch?v=qjz_q-IyFwA

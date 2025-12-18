@@ -1,13 +1,18 @@
-# Python Virtual Environment
-.venv/
-venv/
+# Python
 __pycache__/
-
-# Dependencies (자동 생성 파일)
 *.pyc
 
-# IDE files (선택)
+# Virtual env
+.venv/
+venv/
+
+# Env
+.env
+
+# Vector DB
+chroma_db/
+*.sqlite3
+
+# IDE
 .vscode/
 .idea/
-
-.env

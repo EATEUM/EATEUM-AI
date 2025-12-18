@@ -1,0 +1,260 @@
+recipe_video_id,video_title,video_url,thumbnail_url,view_count,duration,steps_json
+1,한국 길거리 음식 NO.1 떡볶이,https://www.youtube.com/watch?v=t4Es8mwdYlE,https://img.youtube.com/vi/t4Es8mwdYlE/maxresdefault.jpg,14447169,12:56,"```json
+[
+    {""step"": 1, ""step_title"": ""재료 준비"", ""step_detail"": ""양파와 파를 손질합니다. 파는 길게 자르고, 양배추는 적당한 크기로 자릅니다.""},
+    {""step"": 2, ""step_title"": ""소스 만들기"", ""step_detail"": ""냄비에 물 1L, 간장 1/3컵, 설탕 1/3컵, 고추장 1/3컵, 고춧가루 1/3컵을 넣고 섞습니다.""},
+    {""step"": 3, ""step_title"": ""재료 추가"", ""step_detail"": ""양배추와 파를 소스에 추가하고 끓입니다.""},
+    {""step"": 4, ""step_title"": ""떡 추가"", ""step_detail"": ""밀가루 떡 4컵과 어묵을 추가하고 잘 섞습니다.""},
+    {""step"": 5, ""step_title"": ""조리"", ""step_detail"": ""모든 재료가 잘 섞이도록 끓입니다.""},
+    {""step"": 6, ""step_title"": ""마무리"", ""step_detail"": ""원하는 만큼 파를 추가하고, 필요시 삶은 계란을 추가합니다.""}
+]
+```"
+2,양배추전으로 살 10kg 그냥 뺍니다,https://www.youtube.com/watch?v=cUQzxhmYdGs,https://img.youtube.com/vi/cUQzxhmYdGs/maxresdefault.jpg,2268159,10:44,"```json
+[
+    {""step"": 1, ""step_title"": ""재료 준비"", ""step_detail"": ""양배추를 얇게 썰어 준비합니다.""},
+    {""step"": 2, ""step_title"": ""반죽 만들기"", ""step_detail"": ""양배추, 파, 당근을 볼에 담고 계란과 부침가루를 넣어 섞습니다.""},
+    {""step"": 3, ""step_title"": ""굽기"", ""step_detail"": ""팬에 기름을 두르고 반죽을 넓게 펴서 약불에 굽습니다.""},
+    {""step"": 4, ""step_title"": ""뒤집기"", ""step_detail"": ""한쪽 면이 익으면 뒤집어서 노릇하게 익혀줍니다.""},
+    {""step"": 5, ""step_title"": ""완성"", ""step_detail"": ""접시에 담아 원하는 소스와 함께 즐깁니다.""}
+]
+```"
+3,달걀로 만두를 어떻게 만들지?,https://youtu.be/5-a5CPASYBc?si=EkO5CCdPZNwYZxOd,https://img.youtube.com/vi/5-a5CPASYBc/maxresdefault.jpg,540000,08:30,"```json
+[
+    {""step"": 1, ""step_title"": ""당면 불리기"", ""step_detail"": ""당면을 뜨거운 물에 30분간 불려 준비합니다.""},
+    {""step"": 2, ""step_title"": ""재료 손질"", ""step_detail"": ""파, 고추를 잘게 다지고 불린 당면도 잘게 자릅니다.""},
+    {""step"": 3, ""step_title"": ""반죽"", ""step_detail"": ""볼에 모든 재료와 달걀, 소금, 후추를 넣고 잘 섞습니다.""},
+    {""step"": 4, ""step_title"": ""부치기"", ""step_detail"": ""프라이팬에 기름을 두르고 한 숟가락씩 떠서 만두 모양으로 부칩니다.""},
+    {""step"": 5, ""step_title"": ""마무리"", ""step_detail"": ""앞뒤로 노릇하게 익으면 완성입니다.""}
+]
+```"
+4,[어남선생] 떡볶이는 이제 평생 이 간단 레시피면 끝!,https://www.youtube.com/watch?v=xtW8mjglyfY,https://img.youtube.com/vi/xtW8mjglyfY/maxresdefault.jpg,3100000,15:20,"```json
+[
+    {""step"": 1, ""step_title"": ""파기름 내기"", ""step_detail"": ""팬에 식용유를 두르고 대파를 볶아 파기름을 냅니다.""},
+    {""step"": 2, ""step_title"": ""고기 볶기"", ""step_detail"": ""차돌박이나 다진 고기를 넣고 함께 볶습니다.""},
+    {""step"": 3, ""step_title"": ""양념"", ""step_detail"": ""고추장, 고춧가루, 설탕, 간장을 비율대로 넣고 볶습니다.""},
+    {""step"": 4, ""step_title"": ""끓이기"", ""step_detail"": ""물을 붓고 떡과 어묵을 넣어 끓입니다.""},
+    {""step"": 5, ""step_title"": ""조리기"", ""step_detail"": ""국물이 자작해질 때까지 조리면 완성입니다.""}
+]
+```"
+5,이정현의 참깨오이김밥 · 계란말이김밥,https://www.youtube.com/watch?v=aT7B_WbR5fQ,https://img.youtube.com/vi/aT7B_WbR5fQ/maxresdefault.jpg,890000,11:10,"```json
+[
+    {""step"": 1, ""step_title"": ""오이 손질"", ""step_detail"": ""오이를 길게 채 썰어 소금에 절인 후 물기를 짭니다.""},
+    {""step"": 2, ""step_title"": ""밥 양념"", ""step_detail"": ""따뜻한 밥에 참기름, 소금, 깨를 넣고 비벼줍니다.""},
+    {""step"": 3, ""step_title"": ""계란말이"", ""step_detail"": ""계란을 풀어 두툼하게 계란말이를 만듭니다.""},
+    {""step"": 4, ""step_title"": ""말기"", ""step_detail"": ""김 위에 밥을 펴고 오이와 마요네즈, 계란말이를 넣어 맙니다.""},
+    {""step"": 5, ""step_title"": ""썰기"", ""step_detail"": ""먹기 좋은 크기로 썰어 접시에 담습니다.""}
+]
+```"
+6,"속을 가득 채우는 든든함, 가츠동",https://youtu.be/WmjbwOI0HbU?si=1DcsgI1ULl8qRbER,https://img.youtube.com/vi/WmjbwOI0HbU/maxresdefault.jpg,1200000,09:45,"```json
+[
+    {""step"": 1, ""step_title"": ""돈가스 튀기기"", ""step_detail"": ""돼지고기에 튀김옷을 입혀 바삭하게 튀겨냅니다.""},
+    {""step"": 2, ""step_title"": ""소스 만들기"", ""step_detail"": ""팬에 물, 간장, 맛술, 설탕, 양파를 넣고 끓입니다.""},
+    {""step"": 3, ""step_title"": ""계란 풀기"", ""step_detail"": ""소스가 끓으면 돈가스를 올리고 푼 계란을 위에 붓습니다.""},
+    {""step"": 4, ""step_title"": ""익히기"", ""step_detail"": ""뚜껑을 덮고 계란이 반숙이 될 때까지 익힙니다.""},
+    {""step"": 5, ""step_title"": ""담기"", ""step_detail"": ""밥 위에 조리된 돈가스와 소스를 얹어 완성합니다.""}
+]
+```"
+7,새우 볶음 우동 만들기,https://youtu.be/rNEdjio7QBQ?si=ZERPPC1nAM6PGxF4,https://img.youtube.com/vi/rNEdjio7QBQ/maxresdefault.jpg,450000,07:12,"```json
+[
+    {""step"": 1, ""step_title"": ""면 삶기"", ""step_detail"": ""우동면을 끓는 물에 데쳐 준비합니다.""},
+    {""step"": 2, ""step_title"": ""재료 볶기"", ""step_detail"": ""팬에 기름을 두르고 새우, 양파, 파를 볶습니다.""},
+    {""step"": 3, ""step_title"": ""소스 넣기"", ""step_detail"": ""간장, 굴소스, 설탕을 넣고 재료와 함께 볶습니다.""},
+    {""step"": 4, ""step_title"": ""면 볶기"", ""step_detail"": ""우동면을 넣고 양념이 배도록 센 불에 볶습니다.""},
+    {""step"": 5, ""step_title"": ""마무리"", ""step_detail"": ""접시에 담고 가쓰오부시나 파를 뿌려 완성합니다.""}
+]
+```"
+8,소고기 토마토 파스타,https://youtu.be/_iKUeCkqi9I?si=jkCdjwMcaOgb6Tdu,https://img.youtube.com/vi/_iKUeCkqi9I/maxresdefault.jpg,1560000,13:40,"```json
+[
+    {""step"": 1, ""step_title"": ""면 삶기"", ""step_detail"": ""소금을 넣은 끓는 물에 파스타면을 삶습니다.""},
+    {""step"": 2, ""step_title"": ""고기 굽기"", ""step_detail"": ""다진 소고기를 팬에 넣고 소금, 후추로 간하여 볶습니다.""},
+    {""step"": 3, ""step_title"": ""소스 조리"", ""step_detail"": ""고기가 익으면 양파, 마늘을 넣고 볶다가 토마토소스를 붓습니다.""},
+    {""step"": 4, ""step_title"": ""섞기"", ""step_detail"": ""삶은 면을 소스에 넣고 잘 버무려줍니다.""},
+    {""step"": 5, ""step_title"": ""플레이팅"", ""step_detail"": ""접시에 담고 파슬리 가루를 뿌려 마무리합니다.""}
+]
+```"
+9,집에서 '크림파스타' 쯤이야,https://youtu.be/0bnFoRQebq0?si=kiOSNdQrlH7RHISN,https://img.youtube.com/vi/0bnFoRQebq0/maxresdefault.jpg,2100000,10:05,"```json
+[
+    {""step"": 1, ""step_title"": ""재료 준비"", ""step_detail"": ""베이컨, 양송이, 양파를 먹기 좋은 크기로 썹니다.""},
+    {""step"": 2, ""step_title"": ""볶기"", ""step_detail"": ""팬에 버터를 녹이고 재료들을 볶아 풍미를 냅니다.""},
+    {""step"": 3, ""step_title"": ""크림 소스"", ""step_detail"": ""우유와 생크림을 1:1 비율로 넣고 끓입니다.""},
+    {""step"": 4, ""step_title"": ""면 추가"", ""step_detail"": ""삶은 파스타면을 넣고 소스가 걸쭉해질 때까지 조립니다.""},
+    {""step"": 5, ""step_title"": ""완성"", ""step_detail"": ""후추를 뿌려 접시에 담아냅니다.""}
+]
+```"
+10,간단 계란 요리! 계란후라이덮밥,https://youtu.be/_8PabBW-c8U?si=dHVXvm5ha5THBxUP,https://img.youtube.com/vi/_8PabBW-c8U/maxresdefault.jpg,670000,06:20,"```json
+[
+    {""step"": 1, ""step_title"": ""파기름"", ""step_detail"": ""팬에 식용유를 두르고 파를 볶아 향을 냅니다.""},
+    {""step"": 2, ""step_title"": ""계란 후라이"", ""step_detail"": ""계란을 깨뜨려 반숙으로 후라이를 만듭니다.""},
+    {""step"": 3, ""step_title"": ""양념장"", ""step_detail"": ""간장, 참기름, 깨를 섞어 양념장을 만듭니다.""},
+    {""step"": 4, ""step_title"": ""담기"", ""step_detail"": ""따뜻한 밥 위에 계란 후라이를 올립니다.""},
+    {""step"": 5, ""step_title"": ""비비기"", ""step_detail"": ""양념장을 뿌리고 김가루를 곁들여 비벼 먹습니다.""}
+]
+```"
+11,이연복의 칠리새우,https://youtu.be/HHxrciV2-MU?si=HscScOOJa-OT7NVC,https://img.youtube.com/vi/HHxrciV2-MU/maxresdefault.jpg,1807132,08:55,"```json
+[
+    {""step"": 1, ""step_title"": ""새우 손질"", ""step_detail"": ""새우의 물기를 제거하고 등 쪽을 살짝 갈라줍니다.""},
+    {""step"": 2, ""step_title"": ""반죽"", ""step_detail"": ""감자 전분, 물, 계란, 식용유를 섞어 튀김 반죽을 만듭니다.""},
+    {""step"": 3, ""step_title"": ""튀기기"", ""step_detail"": ""기름 온도가 오르면 새우를 넣고 바삭하게 튀겨냅니다.""},
+    {""step"": 4, ""step_title"": ""소스 만들기"", ""step_detail"": ""팬에 고추기름, 마늘, 파를 볶다가 케첩, 설탕, 식초, 두반장을 넣고 끓입니다.""},
+    {""step"": 5, ""step_title"": ""버무리기"", ""step_detail"": ""튀긴 새우를 소스에 넣고 빠르게 버무려 완성합니다.""}
+]
+```"
+12,5분이면 끝나는 비빕밥,https://youtu.be/Jq2SwKMw8vI?si=bxivWeGjSLBEjUMz,https://img.youtube.com/vi/Jq2SwKMw8vI/maxresdefault.jpg,1050000,05:30,"```json
+[
+    {""step"": 1, ""step_title"": ""나물 준비"", ""step_detail"": ""콩나물, 애호박, 당근 등을 데치거나 볶아 준비합니다.""},
+    {""step"": 2, ""step_title"": ""밥 담기"", ""step_detail"": ""큰 그릇에 따뜻한 밥을 담습니다.""},
+    {""step"": 3, ""step_title"": ""재료 올리기"", ""step_detail"": ""준비한 나물들과 계란 후라이를 예쁘게 올립니다.""},
+    {""step"": 4, ""step_title"": ""고추장"", ""step_detail"": ""고추장 한 스푼과 참기름을 두릅니다.""},
+    {""step"": 5, ""step_title"": ""완성"", ""step_detail"": ""모든 재료를 잘 비벼서 맛있게 먹습니다.""}
+]
+```"
+13,풍미를 살리는 비빔국수 비법!,https://youtu.be/JALXIHKui7U?si=NqZMS7OkowyZAwSh,https://img.youtube.com/vi/JALXIHKui7U/maxresdefault.jpg,980000,09:15,"```json
+[
+    {""step"": 1, ""step_title"": ""면 삶기"", ""step_detail"": ""소면을 끓는 물에 삶고 찬물에 헹궈 물기를 뺍니다.""},
+    {""step"": 2, ""step_title"": ""고명 준비"", ""step_detail"": ""오이와 김치는 채 썰어 준비합니다.""},
+    {""step"": 3, ""step_title"": ""양념장"", ""step_detail"": ""고추장, 설탕, 식초, 간장, 다진 마늘, 참기름을 섞습니다.""},
+    {""step"": 4, ""step_title"": ""비비기"", ""step_detail"": ""면과 양념장을 볼에 넣고 잘 비벼줍니다.""},
+    {""step"": 5, ""step_title"": ""마무리"", ""step_detail"": ""그릇에 담고 오이, 삶은 계란, 깨를 올려 완성합니다.""}
+]
+```"
+14,현지맛 가득한 고기짬뽕라면!,https://youtu.be/FbdC6KmYgis?si=g9UtfBR9FXmzLJQv,https://img.youtube.com/vi/FbdC6KmYgis/maxresdefault.jpg,850000,08:40,"```json
+[{""step"": 1, ""step_title"": ""야채 볶기"", ""step_detail"": ""팬에 기름을 두르고 양파와 애호박을 센 불에 볶습니다.""}, {""step"": 2, ""step_title"": ""고기 추가"", ""step_detail"": ""돼지고기와 고춧가루를 넣고 불맛을 내며 볶습니다.""}, {""step"": 3, ""step_title"": ""끓이기"", ""step_detail"": ""물을 붓고 라면 스프와 면을 넣어 끓여 완성합니다.""}]
+```"
+15,삼겹살 부타동 : 고기 덮밥의 완결판,https://youtu.be/pRMcKH6p92U?si=Qftz2fuZwh8i2TSj,https://img.youtube.com/vi/pRMcKH6p92U/maxresdefault.jpg,1100000,10:20,"```json
+[{""step"": 1, ""step_title"": ""고기 굽기"", ""step_detail"": ""삼겹살을 팬에 노릇하게 굽습니다.""}, {""step"": 2, ""step_title"": ""소스 조리기"", ""step_detail"": ""간장, 미림, 설탕을 넣고 고기에 양념이 배도록 조립니다.""}, {""step"": 3, ""step_title"": ""마무리"", ""step_detail"": ""밥 위에 고기를 얹고 파와 후추를 뿌립니다.""}]
+```"
+16,된장찌개 하나로 빌딩을 세운 전설의 맛,https://youtu.be/T4ylPWlBaRA?si=FEQy5Ju7p1Lhck4x,https://img.youtube.com/vi/T4ylPWlBaRA/maxresdefault.jpg,2300000,12:15,"```json
+[{""step"": 1, ""step_title"": ""육수 내기"", ""step_detail"": ""멸치 육수에 된장을 풀고 끓입니다.""}, {""step"": 2, ""step_title"": ""재료 넣기"", ""step_detail"": ""소고기, 두부, 고추를 넣고 한소끔 끓입니다.""}, {""step"": 3, ""step_title"": ""부추 추가"", ""step_detail"": ""마지막에 부추를 올려 향을 더합니다.""}]
+```"
+17,[어남선생] 만원 갈비찜,https://youtu.be/VXd_1jrlgNw?si=qKmNVLSQfbtLZD4l,https://img.youtube.com/vi/VXd_1jrlgNw/maxresdefault.jpg,4500000,18:30,"```json
+[{""step"": 1, ""step_title"": ""고기 손질"", ""step_detail"": ""돼지고기를 찬물에 헹궈 핏물을 제거합니다.""}, {""step"": 2, ""step_title"": ""양념 조리기"", ""step_detail"": ""간장, 설탕, 식초를 넣고 압력솥이나 팬에 푹 조립니다.""}, {""step"": 3, ""step_title"": ""완성"", ""step_detail"": ""고기가 부드러워지면 후추를 뿌려 마무리합니다.""}]
+```"
+18,당신의 혀를 유린하는 : 유린기,https://youtu.be/cMVqrDbK41c?si=bfqfrgWnhRMG_aMz,https://img.youtube.com/vi/cMVqrDbK41c/maxresdefault.jpg,950000,14:20,"```json
+[{""step"": 1, ""step_title"": ""닭 튀기기"", ""step_detail"": ""닭고기에 전분 가루를 입혀 바삭하게 두 번 튀깁니다.""}, {""step"": 2, ""step_title"": ""소스 제조"", ""step_detail"": ""간장, 식초, 설탕, 다진 마늘과 파를 섞어 새콤달콤한 소스를 만듭니다.""}, {""step"": 3, ""step_title"": ""플레이팅"", ""step_detail"": ""튀긴 닭 위에 소스를 듬뿍 뿌립니다.""}]
+```"
+19,대패삽겹살 두루치기,https://youtu.be/karvaPE3PgQ?si=-t_shrgbaX2SmVGV,https://img.youtube.com/vi/karvaPE3PgQ/maxresdefault.jpg,1200000,11:50,"```json
+[{""step"": 1, ""step_title"": ""고기 볶기"", ""step_detail"": ""대패삼겹살을 팬에 볶다가 기름이 나오면 양파와 파를 넣습니다.""}, {""step"": 2, ""step_title"": ""양념 하기"", ""step_detail"": ""고추장, 고춧가루, 간장 양념을 넣고 센 불에 볶습니다.""}, {""step"": 3, ""step_title"": ""완성"", ""step_detail"": ""깨와 참기름을 둘러 마무리합니다.""}]
+```"
+20,김치나베돈까스,https://youtu.be/qp_kMDWdE2c?si=FnU8iTlWWweYN2J7,https://img.youtube.com/vi/qp_kMDWdE2c/maxresdefault.jpg,780000,09:10,"```json
+[{""step"": 1, ""step_title"": ""김치 볶기"", ""step_detail"": ""냄비에 김치와 고기를 볶다가 물을 붓고 끓입니다.""}, {""step"": 2, ""step_title"": ""돈까스 올리기"", ""step_detail"": ""끓는 국물 위에 튀긴 돈까스를 올립니다.""}, {""step"": 3, ""step_title"": ""계란물"", ""step_detail"": ""계란물을 두르고 치즈를 얹어 익힙니다.""}]
+```"
+21,또 찾게 될 맛! 최고의 오꼬노미야끼 레시피 공개,https://youtu.be/RhSfA2KRPWs?si=dPW2WbBwPB4oZQ2p,https://img.youtube.com/vi/RhSfA2KRPWs/maxresdefault.jpg,1800000,12:40,"```json
+[{""step"": 1, ""step_title"": ""반죽"", ""step_detail"": ""양배추, 베이컨, 핫케이크믹스를 섞어 반죽을 만듭니다.""}, {""step"": 2, ""step_title"": ""굽기"", ""step_detail"": ""팬에 두툼하게 올려 앞뒤로 노릇하게 굽습니다.""}, {""step"": 3, ""step_title"": ""토핑"", ""step_detail"": ""돈까스소스, 마요네즈, 가쓰오부시를 올려 마무리합니다.""}]
+```"
+22,180만 뷰! 스파게티 알리오 올리오,https://youtu.be/HqAi4_ucgjY?si=U7OytFi6a19t5-O9,https://img.youtube.com/vi/HqAi4_ucgjY/maxresdefault.jpg,1800000,08:50,"```json
+[{""step"": 1, ""step_title"": ""마늘 볶기"", ""step_detail"": ""올리브오일에 편마늘을 황금색이 될 때까지 볶습니다.""}, {""step"": 2, ""step_title"": ""면 추가"", ""step_detail"": ""삶은 파스타면과 고추를 넣고 면수와 함께 볶습니다.""}, {""step"": 3, ""step_title"": ""간 맞추기"", ""step_detail"": ""소금, 후추, 치즈가루로 간을 하여 완성합니다.""}]
+```"
+23,전설의 포테이토 스프,https://www.youtube.com/watch?v=zf7JX7d9PK0,https://img.youtube.com/vi/zf7JX7d9PK0/maxresdefault.jpg,650000,07:30,"```json
+[{""step"": 1, ""step_title"": ""감자 삶기"", ""step_detail"": ""감자를 삶아 곱게 으깹니다.""}, {""step"": 2, ""step_title"": ""스프 끓이기"", ""step_detail"": ""버터에 파를 볶다가 으깬 감자와 우유를 넣고 끓입니다.""}, {""step"": 3, ""step_title"": ""간 하기"", ""step_detail"": ""소금과 후추로 간을 하고 부드러워질 때까지 저어줍니다.""}]
+```"
+24,일본 가정집의 이상적인 오므라이스,https://youtu.be/upip4W7TfrE?si=5b-5n75Uji-l6EsC,https://img.youtube.com/vi/upip4W7TfrE/maxresdefault.jpg,1400000,13:15,"```json
+[{""step"": 1, ""step_title"": ""볶음밥"", ""step_detail"": ""닭고기와 채소를 볶다가 밥과 케찹을 넣어 볶음밥을 만듭니다.""}, {""step"": 2, ""step_title"": ""계란 지단"", ""step_detail"": ""계란을 풀어 팬에 부드럽게 익힙니다.""}, {""step"": 3, ""step_title"": ""모양 잡기"", ""step_detail"": ""밥 위에 계란을 덮고 럭비공 모양으로 잡아 완성합니다.""}]
+```"
+25,나는 이거 사 먹을 때 돈 아깝다! 샐러드볼,https://youtu.be/kD0M6_os6LQ?si=pyUmkP3sdWx-lZOj,https://img.youtube.com/vi/kD0M6_os6LQ/maxresdefault.jpg,920000,15:40,"```json
+[{""step"": 1, ""step_title"": ""재료 손질"", ""step_detail"": ""양배추, 토마토, 오이를 한입 크기로 자릅니다.""}, {""step"": 2, ""step_title"": ""단백질 추가"", ""step_detail"": ""새우나 소고기를 구워 곁들입니다.""}, {""step"": 3, ""step_title"": ""드레싱"", ""step_detail"": ""마요네즈와 스리라차 소스를 섞어 뿌려줍니다.""}]
+```"
+26,이번 주말엔 소고기보다 맛있는 치킨 스테이크 조림 만들기,https://youtu.be/MTdgUet8ndo?si=SM1UNLwCHUmrve9k,https://img.youtube.com/vi/MTdgUet8ndo/maxresdefault.jpg,850000,11:20,"```json
+[{""step"": 1, ""step_title"": ""고기 굽기"", ""step_detail"": ""닭다리살을 껍질부터 바삭하게 굽습니다.""}, {""step"": 2, ""step_title"": ""소스 조리기"", ""step_detail"": ""간장, 설탕, 굴소스를 넣고 소스가 끈적해질 때까지 조립니다.""}, {""step"": 3, ""step_title"": ""마무리"", ""step_detail"": ""버터를 한 조각 넣어 풍미를 살립니다.""}]
+```"
+27,정말 맛있는 볶음우동,https://youtu.be/ienGoTyboNE?si=K2z8HIKrX6yxVNav,https://img.youtube.com/vi/ienGoTyboNE/maxresdefault.jpg,560000,09:30,"```json
+[{""step"": 1, ""step_title"": ""야채 볶기"", ""step_detail"": ""마늘과 양파, 양배추를 팬에 볶습니다.""}, {""step"": 2, ""step_title"": ""면과 소스"", ""step_detail"": ""우동면과 굴소스, 간장을 넣고 센 불에 볶습니다.""}, {""step"": 3, ""step_title"": ""마무리"", ""step_detail"": ""참기름과 후추를 뿌려 완성합니다.""}]
+```"
+28,[성시경 레시피] 연어덮밥,https://youtu.be/ZxrbFZzd9mM?si=p8PQj62-v3s_GYRF,https://img.youtube.com/vi/ZxrbFZzd9mM/maxresdefault.jpg,2100000,14:10,"```json
+[{""step"": 1, ""step_title"": ""연어 굽기"", ""step_detail"": ""연어에 소금 간을 하고 버터에 겉면만 바삭하게 굽습니다.""}, {""step"": 2, ""step_title"": ""소스 제조"", ""step_detail"": ""메이플시럽과 간장을 섞어 달콤짭짤한 소스를 만듭니다.""}, {""step"": 3, ""step_title"": ""세팅"", ""step_detail"": ""밥 위에 구운 연어를 올리고 소스를 뿌립니다.""}]
+```"
+29,[연어장] 이렇게 간단해도 되나요?,https://www.youtube.com/watch?v=6bWw8Vr-DA4,https://img.youtube.com/vi/6bWw8Vr-DA4/maxresdefault.jpg,1200000,08:50,"```json
+[{""step"": 1, ""step_title"": ""연어 손질"", ""step_detail"": ""신선한 연어를 깍둑썰기합니다.""}, {""step"": 2, ""step_title"": ""절임장"", ""step_detail"": ""간장, 설탕, 양파, 고추를 섞어 절임장을 만듭니다.""}, {""step"": 3, ""step_title"": ""숙성"", ""step_detail"": ""연어를 절임장에 담가 냉장고에서 4시간 숙성합니다.""}]
+```"
+30,진짜 오뎅탕 : 실제 전문점 레시피,https://youtu.be/gF89o3xmG5c?si=RZ09XKcF_locaGna,https://img.youtube.com/vi/gF89o3xmG5c/maxresdefault.jpg,1800000,12:20,"```json
+[{""step"": 1, ""step_title"": ""육수"", ""step_detail"": ""무와 다시마를 넣고 진하게 육수를 우립니다.""}, {""step"": 2, ""step_title"": ""재료 추가"", ""step_detail"": ""어묵, 두부, 유부를 넣고 간장으로 간을 합니다.""}, {""step"": 3, ""step_title"": ""마무리"", ""step_detail"": ""가쓰오부시를 넣어 풍미를 극대화합니다.""}]
+```"
+31,[성시경 레시피] 아스파라거스 닭구이,https://youtu.be/Sp0BoTDiTQw?si=Ai0HDUHzdBwLMxPS,https://img.youtube.com/vi/Sp0BoTDiTQw/maxresdefault.jpg,950000,16:40,"```json
+[{""step"": 1, ""step_title"": ""밑간"", ""step_detail"": ""닭고기에 소금, 후추, 미림으로 밑간을 합니다.""}, {""step"": 2, ""step_title"": ""굽기"", ""step_detail"": ""팬에 닭고기와 아스파라거스를 함께 노릇하게 굽습니다.""}, {""step"": 3, ""step_title"": ""소스"", ""step_detail"": ""쯔유와 레몬즙을 섞어 소스를 곁들입니다.""}]
+```"
+32,일본인이 만드는 스키야키,https://youtu.be/TjtVAwV6Bl8?si=kbk-O43hHtQu3U9k,https://img.youtube.com/vi/TjtVAwV6Bl8/maxresdefault.jpg,1300000,14:20,"```json
+[{""step"": 1, ""step_title"": ""고기 굽기"", ""step_detail"": ""소고기를 팬에 굽다가 설탕과 간장을 뿌립니다.""}, {""step"": 2, ""step_title"": ""채소 추가"", ""step_detail"": ""두부, 곤약, 파, 버섯을 넣고 자작하게 끓입니다.""}, {""step"": 3, ""step_title"": ""찍어먹기"", ""step_detail"": ""날달걀을 풀어 고기와 채소를 찍어 먹습니다.""}]
+```"
+33,5분만에 만드는 붓가케냉우동,https://youtu.be/PQQNE2dMh1U?si=6iFAxoYfWiJdqCr3,https://img.youtube.com/vi/PQQNE2dMh1U/maxresdefault.jpg,420000,06:10,"```json
+[{""step"": 1, ""step_title"": ""면 준비"", ""step_detail"": ""우동면을 삶아 찬물에 헹궈 쫄깃하게 만듭니다.""}, {""step"": 2, ""step_title"": ""소스"", ""step_detail"": ""시판 쯔유를 차갑게 준비합니다.""}, {""step"": 3, ""step_title"": ""고명"", ""step_detail"": ""면 위에 쯔유를 붓고 파와 달걀을 올려 완성합니다.""}]
+```"
+34,3744원으로 만드는 치킨 가라아게,https://youtu.be/CB65iFGgqhw?si=_ekU6bYSIepDHxXN,https://img.youtube.com/vi/CB65iFGgqhw/maxresdefault.jpg,890000,10:45,"```json
+[{""step"": 1, ""step_title"": ""염지"", ""step_detail"": ""닭고기에 간장, 생강, 마늘로 밑간을 합니다.""}, {""step"": 2, ""step_title"": ""옷 입히기"", ""step_detail"": ""전분 가루를 얇게 입혀 털어냅니다.""}, {""step"": 3, ""step_title"": ""튀기기"", ""step_detail"": ""180도 기름에 바삭하게 튀겨냅니다.""}]
+```"
+35,로제파스타 집에서 전문점처럼!,https://youtu.be/RZuVdOg7nMM?si=aMVOy_eZBnCBRCuH,https://img.youtube.com/vi/RZuVdOg7nMM/maxresdefault.jpg,1560000,11:30,"```json
+[{""step"": 1, ""step_title"": ""재료 볶기"", ""step_detail"": ""마늘, 베이컨, 새우를 올리브오일에 볶습니다.""}, {""step"": 2, ""step_title"": ""소스 조리"", ""step_detail"": ""토마토소스와 생크림을 섞어 로제 소스를 만듭니다.""}, {""step"": 3, ""step_title"": ""면 섞기"", ""step_detail"": ""삶은 면을 넣고 소스가 배어들게 볶아 완성합니다.""}]
+```"
+36,크림 리조또,https://youtu.be/RIK212UOBrU?si=kjwnQPwAbXq2uPEs,https://img.youtube.com/vi/RIK212UOBrU/maxresdefault.jpg,750000,09:15,"```json
+[{""step"": 1, ""step_title"": ""야채 볶기"", ""step_detail"": ""양파와 스팸을 잘게 썰어 버터에 볶습니다.""}, {""step"": 2, ""step_title"": ""쌀/밥 넣기"", ""step_detail"": ""밥과 우유를 넣고 약불에 뭉근하게 끓입니다.""}, {""step"": 3, ""step_title"": ""치즈 마무리"", ""step_detail"": ""치즈를 넣어 점성을 조절하고 소금, 후추로 간을 합니다.""}]
+```"
+37,전자레인지 감자 그라탕,https://youtu.be/k3rpJlK8z9o?si=3vd_7kMB_ESoCPkd,https://img.youtube.com/vi/k3rpJlK8z9o/maxresdefault.jpg,320000,07:50,"```json
+[{""step"": 1, ""step_title"": ""감자 손질"", ""step_detail"": ""감자를 슬라이스하여 전자레인지에 익힙니다.""}, {""step"": 2, ""step_title"": ""재료 배치"", ""step_detail"": ""익은 감자 위에 베이컨, 옥수수, 소스를 올립니다.""}, {""step"": 3, ""step_title"": ""치즈 녹이기"", ""step_detail"": ""치즈를 듬뿍 올리고 전자레인지에 3분간 돌립니다.""}]
+```"
+38,돈 받고 팔아도 되는 소시지 야채볶음,https://youtu.be/hFW82OfiYSQ?si=LoIMDktrB8gS22nc,https://img.youtube.com/vi/hFW82OfiYSQ/maxresdefault.jpg,880000,08:30,"```json
+[{""step"": 1, ""step_title"": ""소시지 칼집"", ""step_detail"": ""비엔나 소시지에 칼집을 예쁘게 넣습니다.""}, {""step"": 2, ""step_title"": ""야채 볶기"", ""step_detail"": ""파프리카, 양파와 함께 소시지를 볶습니다.""}, {""step"": 3, ""step_title"": ""양념"", ""step_detail"": ""케찹, 고추장, 설탕 소스를 넣고 센 불에 빠르게 볶습니다.""}]
+```"
+39,촉촉 바삭 우유 토스트,https://youtu.be/Qg2ZZQqaXXY?si=z6PA5Z5Fnqk15hCD,https://img.youtube.com/vi/Qg2ZZQqaXXY/maxresdefault.jpg,450000,05:45,"```json
+[{""step"": 1, ""step_title"": ""계란물"", ""step_detail"": ""달걀, 우유, 설탕을 섞어 계란물을 만듭니다.""}, {""step"": 2, ""step_title"": ""적시기"", ""step_detail"": ""식빵을 계란물에 충분히 적십니다.""}, {""step"": 3, ""step_title"": ""굽기"", ""step_detail"": ""버터를 두른 팬에 앞뒤로 노릇하게 굽습니다.""}]
+```"
+40,샘킴의 게살 아보카도 샌드위치,https://youtu.be/tc1H4PPB5lg?si=jKVLOP80gcrBVUnh,https://img.youtube.com/vi/tc1H4PPB5lg/maxresdefault.jpg,670000,12:10,"```json
+[{""step"": 1, ""step_title"": ""과카몰리"", ""step_detail"": ""아보카도를 으깨어 레몬즙, 소금과 섞습니다.""}, {""step"": 2, ""step_title"": ""게살 믹스"", ""step_detail"": ""게살을 마요네즈와 후추에 버무립니다.""}, {""step"": 3, ""step_title"": ""샌드위치 조립"", ""step_detail"": ""구운 빵 사이에 아보카도와 게살을 듬뿍 넣습니다.""}]
+```"
+41,고슬고슬 계란볶음밥 만들기,https://www.youtube.com/watch?v=qUDEyONQaCA,https://img.youtube.com/vi/qUDEyONQaCA/maxresdefault.jpg,1200000,07:20,"```json
+[{""step"": 1, ""step_title"": ""파기름"", ""step_detail"": ""팬에 대파를 볶아 향긋한 기름을 냅니다.""}, {""step"": 2, ""step_title"": ""스크램블"", ""step_detail"": ""계란을 풀어 스크램블을 만든 뒤 밥을 넣습니다.""}, {""step"": 3, ""step_title"": ""간 하기"", ""step_detail"": ""굴소스로 간을 하고 센 불에 고슬하게 볶습니다.""}]
+```"
+42,[이연복] 중국집 짜장면,https://www.youtube.com/watch?v=tQUTkWfHdO8,https://img.youtube.com/vi/tQUTkWfHdO8/maxresdefault.jpg,3500000,15:40,"```json
+[{""step"": 1, ""step_title"": ""춘장 볶기"", ""step_detail"": ""기름에 춘장을 튀기듯 볶아 떫은 맛을 제거합니다.""}, {""step"": 2, ""step_title"": ""고기 야채"", ""step_detail"": ""돼지고기, 양파, 애호박을 춘장과 함께 볶습니다.""}, {""step"": 3, ""step_title"": ""마무리"", ""step_detail"": ""설탕과 전분물을 넣어 농도를 맞춥니다.""}]
+```"
+43,[이연복] 3분 마파두부,https://www.youtube.com/watch?v=I0UXgqBoIEQ,https://img.youtube.com/vi/I0UXgqBoIEQ/maxresdefault.jpg,1900000,08:15,"```json
+[{""step"": 1, ""step_title"": ""두부 손질"", ""step_detail"": ""두부를 깍둑썰기하여 끓는 물에 살짝 데칩니다.""}, {""step"": 2, ""step_title"": ""소스 끓이기"", ""step_detail"": ""두반장, 굴소스, 마늘을 넣고 물과 함께 끓입니다.""}, {""step"": 3, ""step_title"": ""전분물"", ""step_detail"": ""두부를 넣고 전분물로 농도를 잡아 완성합니다.""}]
+```"
+44,5분만에 만드는 탕수육,https://www.youtube.com/watch?v=nCzUhrYE4vI&t=1s,https://img.youtube.com/vi/nCzUhrYE4vI/maxresdefault.jpg,1100000,10:20,"```json
+[{""step"": 1, ""step_title"": ""고기 밑간"", ""step_detail"": ""돼지고기에 소금, 후추로 밑간을 하고 전분을 입힙니다.""}, {""step"": 2, ""step_title"": ""튀기기"", ""step_detail"": ""고기를 바삭하게 튀겨 기름을 뺍니다.""}, {""step"": 3, ""step_title"": ""소스"", ""step_detail"": ""설탕, 식초, 간장을 끓여 만든 소스를 붓거나 찍어 먹습니다.""}]
+```"
+45,1분 초간단 라볶이,https://www.youtube.com/watch?v=6e-IbuuD6ZU,https://img.youtube.com/vi/6e-IbuuD6ZU/maxresdefault.jpg,560000,03:30,"```json
+[{""step"": 1, ""step_title"": ""물 끓이기"", ""step_detail"": ""작은 냄비에 물을 적게 잡고 끓입니다.""}, {""step"": 2, ""step_title"": ""양념"", ""step_detail"": ""라면 스프 절반과 고추장, 설탕을 넣습니다.""}, {""step"": 3, ""step_title"": ""졸이기"", ""step_detail"": ""면을 넣고 국물이 졸아들 때까지 익힙니다.""}]
+```"
+46,바삭바삭 김치부침개 비법,https://www.youtube.com/watch?v=dj254ORKR30,https://img.youtube.com/vi/dj254ORKR30/maxresdefault.jpg,2100000,09:15,"```json
+[{""step"": 1, ""step_title"": ""김치 썰기"", ""step_detail"": ""신김치를 잘게 썰고 김치국물을 섞습니다.""}, {""step"": 2, ""step_title"": ""반죽"", ""step_detail"": ""밀가루와 찬물을 1:1로 섞어 약간 되직하게 만듭니다.""}, {""step"": 3, ""step_title"": ""굽기"", ""step_detail"": ""기름을 많이 두르고 얇게 펴서 바삭하게 굽습니다.""}]
+```"
+47,토마토 계란 두부 볶음밥,https://www.youtube.com/watch?v=h10MlTeRIkY,https://img.youtube.com/vi/h10MlTeRIkY/maxresdefault.jpg,450000,07:50,"```json
+[{""step"": 1, ""step_title"": ""두부 으깨기"", ""step_detail"": ""두부를 수분을 제거한 뒤 팬에 으깨며 볶습니다.""}, {""step"": 2, ""step_title"": ""토마토 계란"", ""step_detail"": ""토마토와 계란을 함께 볶아 풍미를 냅니다.""}, {""step"": 3, ""step_title"": ""섞기"", ""step_detail"": ""모든 재료를 섞어 소금과 굴소스로 간을 합니다.""}]
+```"
+48,전문점보다 맛있는 스팸마요 덮밥,https://www.youtube.com/watch?v=dtYexNnsGvI,https://img.youtube.com/vi/dtYexNnsGvI/maxresdefault.jpg,890000,08:10,"```json
+[{""step"": 1, ""step_title"": ""스팸 굽기"", ""step_detail"": ""스팸을 작은 주사위 모양으로 썰어 바삭하게 굽습니다.""}, {""step"": 2, ""step_title"": ""계란 스크램블"", ""step_detail"": ""계란으로 부드러운 스크램블을 만듭니다.""}, {""step"": 3, ""step_title"": ""세팅"", ""step_detail"": ""밥 위에 재료를 올리고 마요네즈와 데리야끼 소스를 뿌립니다.""}]
+```"
+49,라이스 페이퍼 떡볶이,https://www.youtube.com/watch?v=KLwB9BVxzGg,https://img.youtube.com/vi/KLwB9BVxzGg/maxresdefault.jpg,1200000,11:45,"```json
+[{""step"": 1, ""step_title"": ""떡 만들기"", ""step_detail"": ""라이스페이퍼를 물에 적셔 돌돌 말아 떡 모양을 만듭니다.""}, {""step"": 2, ""step_title"": ""소스 끓이기"", ""step_detail"": ""고추장 소스에 어묵과 채소를 넣고 끓입니다.""}, {""step"": 3, ""step_title"": ""떡 넣기"", ""step_detail"": ""만든 라이스페이퍼 떡을 넣고 짧게 조려 완성합니다.""}]
+```"
+50,[이연복] 새우 볶음밥,https://www.youtube.com/watch?v=11lVLe1vnb0,https://img.youtube.com/vi/11lVLe1vnb0/maxresdefault.jpg,2800000,09:30,"```json
+[{""step"": 1, ""step_title"": ""계란 볶기"", ""step_detail"": ""팬에 계란을 먼저 볶다가 밥을 넣습니다.""}, {""step"": 2, ""step_title"": ""새우와 야채"", ""step_detail"": ""데친 새우와 당근, 파를 넣고 함께 볶습니다.""}, {""step"": 3, ""step_title"": ""간 하기"", ""step_detail"": ""소금과 굴소스로 깔끔하게 간을 맞춥니다.""}]
+```"
+51,탄탄면을 집에서?,https://www.youtube.com/watch?v=lIDumw40-ko,https://img.youtube.com/vi/lIDumw40-ko/maxresdefault.jpg,670000,13:20,"```json
+[{""step"": 1, ""step_title"": ""고기 고명"", ""step_detail"": ""다진 돼지고기를 간장, 설탕에 볶아 준비합니다.""}, {""step"": 2, ""step_title"": ""국물 제조"", ""step_detail"": ""땅콩버터와 고추기름을 섞어 고소한 육수를 만듭니다.""}, {""step"": 3, ""step_title"": ""면 세팅"", ""step_detail"": ""삶은 우동면에 육수를 붓고 숙주와 청경채를 올립니다.""}]
+```"
+52,[성시경 레시피] 가지 덮밥,https://www.youtube.com/watch?v=06OnVwhhkbE,https://img.youtube.com/vi/06OnVwhhkbE/maxresdefault.jpg,1500000,16:15,"```json
+[{""step"": 1, ""step_title"": ""가지 굽기"", ""step_detail"": ""가지를 큼직하게 썰어 기름에 튀기듯 굽습니다.""}, {""step"": 2, ""step_title"": ""소스 볶기"", ""step_detail"": ""다진 고기와 두반장, 굴소스를 넣고 소스를 만듭니다.""}, {""step"": 3, ""step_title"": ""버무리기"", ""step_detail"": ""구운 가지를 소스에 버무려 밥 위에 얹어냅니다.""}]
+```"
+53,절대 불지 않는 잡채 만들기,https://www.youtube.com/watch?v=vqb3WyZmL_8,https://img.youtube.com/vi/vqb3WyZmL_8/maxresdefault.jpg,3200000,22:10,"```json
+[{""step"": 1, ""step_title"": ""당면 삶기"", ""step_detail"": ""당면을 삶은 뒤 간장과 기름에 먼저 조려둡니다.""}, {""step"": 2, ""step_title"": ""야채 볶기"", ""step_detail"": ""양파, 당근, 버섯, 부추를 각각 따로 볶습니다.""}, {""step"": 3, ""step_title"": ""버무리기"", ""step_detail"": ""모든 재료를 한데 모아 참기름, 깨를 넣고 무칩니다.""}]
+```"
+54,[이연복] 크림 새우,https://www.youtube.com/watch?v=zB951RGv1EI,https://img.youtube.com/vi/zB951RGv1EI/maxresdefault.jpg,1800000,12:40,"```json
+[{""step"": 1, ""step_title"": ""새우 튀김"", ""step_detail"": ""새우에 튀김가루를 입혀 바삭하게 튀깁니다.""}, {""step"": 2, ""step_title"": ""크림 소스"", ""step_detail"": ""마요네즈, 생크림, 레몬즙, 설탕을 섞어 소스를 만듭니다.""}, {""step"": 3, ""step_title"": ""버무리기"", ""step_detail"": ""양상추 위에 새우를 올리고 소스를 듬뿍 뿌립니다.""}]
+```"
+55,[이연복] 고추 잡채,https://www.youtube.com/watch?v=sFLGovdEBr4,https://img.youtube.com/vi/sFLGovdEBr4/maxresdefault.jpg,1400000,14:20,"```json
+[{""step"": 1, ""step_title"": ""재료 채썰기"", ""step_detail"": ""고기와 피망, 양파를 얇게 채 썹니다.""}, {""step"": 2, ""step_title"": ""볶기"", ""step_detail"": ""팬에 기름을 두르고 고기와 야채를 굴소스와 함께 볶습니다.""}, {""step"": 3, ""step_title"": ""꽃빵 곁들이기"", ""step_detail"": ""따뜻하게 찐 꽃빵과 함께 접시에 담아냅니다.""}]
+```"
+56,초간단 대패삼겹살 배추찜,https://www.youtube.com/watch?v=5DDYEX14r4E,https://img.youtube.com/vi/5DDYEX14r4E/maxresdefault.jpg,850000,10:30,"```json
+[{""step"": 1, ""step_title"": ""재료 겹치기"", ""step_detail"": ""배추와 대패삼겹살을 겹겹이 쌓아 냄비에 담습니다.""}, {""step"": 2, ""step_title"": ""찌기"", ""step_detail"": ""미림을 붓고 뚜껑을 덮어 10분간 쪄냅니다.""}, {""step"": 3, ""step_title"": ""폰즈 소스"", ""step_detail"": ""간장, 식초, 설탕 소스를 곁들여 찍어 먹습니다.""}]
+```"
+57,스팸마요 주먹밥 만들기,https://www.youtube.com/watch?v=9cGWDBYaL2o,https://img.youtube.com/vi/9cGWDBYaL2o/maxresdefault.jpg,320000,08:50,"```json
+[{""step"": 1, ""step_title"": ""스팸 조림"", ""step_detail"": ""스팸을 잘게 썰어 간장, 설탕 소스에 조립니다.""}, {""step"": 2, ""step_title"": ""밥 섞기"", ""step_detail"": ""밥에 조린 스팸과 마요네즈, 김가루를 넣습니다.""}, {""step"": 3, ""step_title"": ""모양 잡기"", ""step_detail"": ""한입 크기로 동그랗게 뭉쳐 주먹밥을 만듭니다.""}]
+```"
+58,포장마차 어묵탕 비법,https://www.youtube.com/watch?v=mJKVKTLN1CA,https://img.youtube.com/vi/mJKVKTLN1CA/maxresdefault.jpg,1100000,13:20,"```json
+[{""step"": 1, ""step_title"": ""진한 육수"", ""step_detail"": ""멸치, 다시마, 무, 파를 넣고 30분간 육수를 냅니다.""}, {""step"": 2, ""step_title"": ""어묵 꼬치"", ""step_detail"": ""어묵을 꼬치에 꿰어 준비합니다.""}, {""step"": 3, ""step_title"": ""간 맞추기"", ""step_detail"": ""액젓과 미원을 약간 넣어 포장마차 맛을 재현합니다.""}]
+```"
+59,[성시경 레시피] 소떡소떡,https://www.youtube.com/watch?v=hw6w9HFwOEY,https://img.youtube.com/vi/hw6w9HFwOEY/maxresdefault.jpg,540000,09:10,"```json
+[{""step"": 1, ""step_title"": ""꼬치 끼우기"", ""step_detail"": ""소시지와 떡을 번갈아 가며 꼬치에 끼웁니다.""}, {""step"": 2, ""step_title"": ""소스 굽기"", ""step_detail"": ""초장, 설탕, 마늘 소스를 발라가며 팬에 굽습니다.""}, {""step"": 3, ""step_title"": ""마무리"", ""step_detail"": ""메이플시럽을 살짝 뿌려 윤기를 더합니다.""}]
+```"
+60,평생 써먹는 잔치국수 레시피,http://youtube.com/watch?v=qjz_q-IyFwA,https://img.youtube.com/vi/qjz_q-IyFwA/maxresdefault.jpg,2500000,15:45,"```json
+[{""step"": 1, ""step_title"": ""멸치 육수"", ""step_detail"": ""멸치와 다시마로 깔끔한 육수를 내고 국간장으로 간을 합니다.""}, {""step"": 2, ""step_title"": ""고명 준비"", ""step_detail"": ""애호박 볶음, 계란 지단, 김가루를 준비합니다.""}, {""step"": 3, ""step_title"": ""면 말기"", ""step_detail"": ""삶은 소면에 육수를 붓고 고명을 올려 완성합니다.""}]
+```"
