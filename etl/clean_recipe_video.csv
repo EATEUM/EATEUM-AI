@@ -1,3 +1,61 @@
-﻿recipe_video_id,video_title,video_url,thumbnail_url,view_count,category_id,dish_name,youtube_video_id,last_search_at,created_at,updated_at
-1,떡볶이,http://url1,http://img1,조회수 1444만회,1,떡볶이,,2025-12-13 19:24:15.248893,2025-12-13 19:24:15.248992,2025-12-13 19:24:15.249054
-2,김치찌개,http://url2,http://img2,조회수 100만회,2,김치찌개,,2025-12-13 19:24:15.248893,2025-12-13 19:24:15.248992,2025-12-13 19:24:15.249054
+﻿recipe_video_id,video_title,thumbnail_url,view_count,duration,category_id,video_url
+1,한국 길거리 음식 NO.1 떡볶이,https://img.youtube.com/vi/t4Es8mwdYlE/maxresdefault.jpg,14447169,12:56,,https://www.youtube.com/watch?v=t4Es8mwdYlE
+2,양배추전으로 살 10kg 그냥 뺍니다,https://img.youtube.com/vi/cUQzxhmYdGs/maxresdefault.jpg,2268159,10:44,,https://www.youtube.com/watch?v=cUQzxhmYdGs
+3,달걀로 만두를 어떻게 만들지?,https://img.youtube.com/vi/5-a5CPASYBc/maxresdefault.jpg,540000,08:30,,https://youtu.be/5-a5CPASYBc?si=EkO5CCdPZNwYZxOd
+4,[어남선생] 떡볶이는 이제 평생 이 간단 레시피면 끝!,https://img.youtube.com/vi/xtW8mjglyfY/maxresdefault.jpg,3100000,15:20,,https://www.youtube.com/watch?v=xtW8mjglyfY
+5,이정현의 참깨오이김밥 · 계란말이김밥,https://img.youtube.com/vi/aT7B_WbR5fQ/maxresdefault.jpg,890000,11:10,,https://www.youtube.com/watch?v=aT7B_WbR5fQ
+6,"속을 가득 채우는 든든함, 가츠동",https://img.youtube.com/vi/WmjbwOI0HbU/maxresdefault.jpg,1200000,09:45,,https://youtu.be/WmjbwOI0HbU?si=1DcsgI1ULl8qRbER
+7,새우 볶음 우동 만들기,https://img.youtube.com/vi/rNEdjio7QBQ/maxresdefault.jpg,450000,07:12,,https://youtu.be/rNEdjio7QBQ?si=ZERPPC1nAM6PGxF4
+8,소고기 토마토 파스타,https://img.youtube.com/vi/_iKUeCkqi9I/maxresdefault.jpg,1560000,13:40,,https://youtu.be/_iKUeCkqi9I?si=jkCdjwMcaOgb6Tdu
+9,집에서 '크림파스타' 쯤이야,https://img.youtube.com/vi/0bnFoRQebq0/maxresdefault.jpg,2100000,10:05,,https://youtu.be/0bnFoRQebq0?si=kiOSNdQrlH7RHISN
+10,간단 계란 요리! 계란후라이덮밥,https://img.youtube.com/vi/_8PabBW-c8U/maxresdefault.jpg,670000,06:20,,https://youtu.be/_8PabBW-c8U?si=dHVXvm5ha5THBxUP
+11,이연복의 칠리새우,https://img.youtube.com/vi/HHxrciV2-MU/maxresdefault.jpg,1807132,08:55,,https://youtu.be/HHxrciV2-MU?si=HscScOOJa-OT7NVC
+12,5분이면 끝나는 비빕밥,https://img.youtube.com/vi/Jq2SwKMw8vI/maxresdefault.jpg,1050000,05:30,,https://youtu.be/Jq2SwKMw8vI?si=bxivWeGjSLBEjUMz
+13,풍미를 살리는 비빔국수 비법!,https://img.youtube.com/vi/JALXIHKui7U/maxresdefault.jpg,980000,09:15,,https://youtu.be/JALXIHKui7U?si=NqZMS7OkowyZAwSh
+14,현지맛 가득한 고기짬뽕라면!,https://img.youtube.com/vi/FbdC6KmYgis/maxresdefault.jpg,850000,08:40,,https://youtu.be/FbdC6KmYgis?si=g9UtfBR9FXmzLJQv
+15,삼겹살 부타동 : 고기 덮밥의 완결판,https://img.youtube.com/vi/pRMcKH6p92U/maxresdefault.jpg,1100000,10:20,,https://youtu.be/pRMcKH6p92U?si=Qftz2fuZwh8i2TSj
+16,된장찌개 하나로 빌딩을 세운 전설의 맛,https://img.youtube.com/vi/T4ylPWlBaRA/maxresdefault.jpg,2300000,12:15,,https://youtu.be/T4ylPWlBaRA?si=FEQy5Ju7p1Lhck4x
+17,[어남선생] 만원 갈비찜,https://img.youtube.com/vi/VXd_1jrlgNw/maxresdefault.jpg,4500000,18:30,,https://youtu.be/VXd_1jrlgNw?si=qKmNVLSQfbtLZD4l
+18,당신의 혀를 유린하는 : 유린기,https://img.youtube.com/vi/cMVqrDbK41c/maxresdefault.jpg,950000,14:20,,https://youtu.be/cMVqrDbK41c?si=bfqfrgWnhRMG_aMz
+19,대패삽겹살 두루치기,https://img.youtube.com/vi/karvaPE3PgQ/maxresdefault.jpg,1200000,11:50,,https://youtu.be/karvaPE3PgQ?si=-t_shrgbaX2SmVGV
+20,김치나베돈까스,https://img.youtube.com/vi/qp_kMDWdE2c/maxresdefault.jpg,780000,09:10,,https://youtu.be/qp_kMDWdE2c?si=FnU8iTlWWweYN2J7
+21,또 찾게 될 맛! 최고의 오꼬노미야끼 레시피 공개,https://img.youtube.com/vi/RhSfA2KRPWs/maxresdefault.jpg,1800000,12:40,,https://youtu.be/RhSfA2KRPWs?si=dPW2WbBwPB4oZQ2p
+22,180만 뷰! 스파게티 알리오 올리오,https://img.youtube.com/vi/HqAi4_ucgjY/maxresdefault.jpg,1800000,08:50,,https://youtu.be/HqAi4_ucgjY?si=U7OytFi6a19t5-O9
+23,전설의 포테이토 스프,https://img.youtube.com/vi/zf7JX7d9PK0/maxresdefault.jpg,650000,07:30,,https://www.youtube.com/watch?v=zf7JX7d9PK0
+24,일본 가정집의 이상적인 오므라이스,https://img.youtube.com/vi/upip4W7TfrE/maxresdefault.jpg,1400000,13:15,,https://youtu.be/upip4W7TfrE?si=5b-5n75Uji-l6EsC
+25,나는 이거 사 먹을 때 돈 아깝다! 샐러드볼,https://img.youtube.com/vi/kD0M6_os6LQ/maxresdefault.jpg,920000,15:40,,https://youtu.be/kD0M6_os6LQ?si=pyUmkP3sdWx-lZOj
+26,"이번 주말엔, 소고기보다 맛있는 치킨 스테이크 조림 만들기",https://img.youtube.com/vi/MTdgUet8ndo/maxresdefault.jpg,850000,11:20,,https://youtu.be/MTdgUet8ndo?si=SM1UNLwCHUmrve9k
+27,정말 맛있는 볶음우동,https://img.youtube.com/vi/ienGoTyboNE/maxresdefault.jpg,560000,09:30,,https://youtu.be/ienGoTyboNE?si=K2z8HIKrX6yxVNav
+28,[성시경 레시피] 연어덮밥 - Grilled Salmon Rice Bowl,https://img.youtube.com/vi/ZxrbFZzd9mM/maxresdefault.jpg,2100000,14:10,,https://youtu.be/ZxrbFZzd9mM?si=p8PQj62-v3s_GYRF
+29,[연어장] 이렇게 간단해도 되나요?,https://img.youtube.com/vi/6bWw8Vr-DA4/maxresdefault.jpg,1200000,08:50,,https://www.youtube.com/watch?v=6bWw8Vr-DA4
+30,"진짜, 오뎅탕 : 실제 전문점의 어묵탕 레시피 공개합니다",https://img.youtube.com/vi/gF89o3xmG5c/maxresdefault.jpg,1800000,12:20,,https://youtu.be/gF89o3xmG5c?si=RZ09XKcF_locaGna
+31,[성시경 레시피] 아스파라거스 닭구이 - Grilled chicken with asparagus,https://img.youtube.com/vi/Sp0BoTDiTQw/maxresdefault.jpg,950000,16:40,,https://youtu.be/Sp0BoTDiTQw?si=Ai0HDUHzdBwLMxPS
+32,일본인이 만드는 스키야키는 무엇이 다를까?,https://img.youtube.com/vi/TjtVAwV6Bl8/maxresdefault.jpg,1300000,14:20,,https://youtu.be/TjtVAwV6Bl8?si=kbk-O43hHtQu3U9k
+33,"쯔유와 함께, 5분만에 만들어본 붓가케냉우동",https://img.youtube.com/vi/PQQNE2dMh1U/maxresdefault.jpg,420000,06:10,,https://youtu.be/PQQNE2dMh1U?si=6iFAxoYfWiJdqCr3
+34,"3744원으로 일본식, 치킨 가라에게 만들기",https://img.youtube.com/vi/CB65iFGgqhw/maxresdefault.jpg,890000,10:45,,https://youtu.be/CB65iFGgqhw?si=_ekU6bYSIepDHxXN
+35,로제파스타~집에서 전문점처럼 먹기!,https://img.youtube.com/vi/RZuVdOg7nMM/maxresdefault.jpg,1560000,11:30,,https://youtu.be/RZuVdOg7nMM?si=aMVOy_eZBnCBRCuH
+36,크림 리조또,https://img.youtube.com/vi/RIK212UOBrU/maxresdefault.jpg,750000,09:15,,https://youtu.be/RIK212UOBrU?si=kjwnQPwAbXq2uPEs
+37,감자 2개로!! 초초간단 전자레인지 감자 그라탕!,https://img.youtube.com/vi/k3rpJlK8z9o/maxresdefault.jpg,320000,07:50,,https://youtu.be/k3rpJlK8z9o?si=3vd_7kMB_ESoCPkd
+38,쏘야! 이렇게 만들면 돈받고 팔아도 됩니다,https://img.youtube.com/vi/hFW82OfiYSQ/maxresdefault.jpg,880000,08:30,,https://youtu.be/hFW82OfiYSQ?si=LoIMDktrB8gS22nc
+39,안은 촉촉! 겉은 바삭! 맛있는 우유 토스트!,https://img.youtube.com/vi/Qg2ZZQqaXXY/maxresdefault.jpg,450000,05:45,,https://youtu.be/Qg2ZZQqaXXY?si=z6PA5Z5Fnqk15hCD
+40,샘킴's 게살 아보카도 샌드위치,https://img.youtube.com/vi/tc1H4PPB5lg/maxresdefault.jpg,670000,12:10,,https://youtu.be/tc1H4PPB5lg?si=jKVLOP80gcrBVUnh
+41,간단요리 : 계란볶음밥 만들기 : 고슬고슬 황금볶음밥,https://img.youtube.com/vi/qUDEyONQaCA/maxresdefault.jpg,1200000,07:20,,https://www.youtube.com/watch?v=qUDEyONQaCA
+42,[이연복] 중국집 짜장면,https://img.youtube.com/vi/tQUTkWfHdO8/maxresdefault.jpg,3500000,15:40,,https://www.youtube.com/watch?v=tQUTkWfHdO8
+43,[이연복] 아주 간단한 3분 마파두부,https://img.youtube.com/vi/I0UXgqBoIEQ/maxresdefault.jpg,1900000,08:15,,https://www.youtube.com/watch?v=I0UXgqBoIEQ
+44,5분만에 만드는 탕수육,https://img.youtube.com/vi/nCzUhrYE4vI/maxresdefault.jpg,1100000,10:20,,https://www.youtube.com/watch?v=nCzUhrYE4vI&t=1s
+45,1분만에 만드는 초간단 라볶이,https://img.youtube.com/vi/6e-IbuuD6ZU/maxresdefault.jpg,560000,03:30,,https://www.youtube.com/watch?v=6e-IbuuD6ZU
+46,바삭바삭 [김치부침개] 앞으로 김치전은 이렇게,https://img.youtube.com/vi/dj254ORKR30/maxresdefault.jpg,2100000,09:15,,https://www.youtube.com/watch?v=dj254ORKR30
+47,밥 대신 먹으면 살이 빠지는 토마토 계란 두부 볶음밥,https://img.youtube.com/vi/h10MlTeRIkY/maxresdefault.jpg,450000,07:50,,https://www.youtube.com/watch?v=h10MlTeRIkY
+48,전문점보다 맛있는 스팸마요 덮밥,https://img.youtube.com/vi/dtYexNnsGvI/maxresdefault.jpg,890000,08:10,,https://www.youtube.com/watch?v=dtYexNnsGvI
+49,라이스 페이퍼 떡볶이,https://img.youtube.com/vi/KLwB9BVxzGg/maxresdefault.jpg,1200000,11:45,,https://www.youtube.com/watch?v=KLwB9BVxzGg
+50,[이연복] 새우 볶음밥,https://img.youtube.com/vi/11lVLe1vnb0/maxresdefault.jpg,2800000,09:30,,https://www.youtube.com/watch?v=11lVLe1vnb0
+51,탄탄면을 집에서?,https://img.youtube.com/vi/lIDumw40-ko/maxresdefault.jpg,670000,13:20,,https://www.youtube.com/watch?v=lIDumw40-ko
+52,[성시경 레시피] 가지 덮밥,https://img.youtube.com/vi/06OnVwhhkbE/maxresdefault.jpg,1500000,16:15,,https://www.youtube.com/watch?v=06OnVwhhkbE
+53,하루가 지나도 절대 불지 않는 잡채 만들기,https://img.youtube.com/vi/vqb3WyZmL_8/maxresdefault.jpg,3200000,22:10,,https://www.youtube.com/watch?v=vqb3WyZmL_8
+54,[이연복] 크림 새우,https://img.youtube.com/vi/zB951RGv1EI/maxresdefault.jpg,1800000,12:40,,https://www.youtube.com/watch?v=zB951RGv1EI
+55,[이연복] 고추 잡채,https://img.youtube.com/vi/sFLGovdEBr4/maxresdefault.jpg,1400000,14:20,,https://www.youtube.com/watch?v=sFLGovdEBr4
+56,초간단 대패삼겹살배추찜,https://img.youtube.com/vi/5DDYEX14r4E/maxresdefault.jpg,850000,10:30,,https://www.youtube.com/watch?v=5DDYEX14r4E
+57,도시락싸기 추천메뉴 스팸마요주먹밥 만들기,https://img.youtube.com/vi/9cGWDBYaL2o/maxresdefault.jpg,320000,08:50,,https://www.youtube.com/watch?v=9cGWDBYaL2o
+58,포장마차 어묵탕 만들기,https://img.youtube.com/vi/mJKVKTLN1CA/maxresdefault.jpg,1100000,13:20,,https://www.youtube.com/watch?v=mJKVKTLN1CA
+59,[성시경 레시피] 소떡소떡,https://img.youtube.com/vi/hw6w9HFwOEY/maxresdefault.jpg,540000,09:10,,https://www.youtube.com/watch?v=hw6w9HFwOEY
+60,[전문점 따라잡기] 평생 써먹는 잔치국수 레시피 팔아도 됩니다,https://img.youtube.com/vi/qjz_q-IyFwA/maxresdefault.jpg,2500000,15:45,,http://youtube.com/watch?v=qjz_q-IyFwA
