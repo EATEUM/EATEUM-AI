@@ -41,43 +41,57 @@ class RecipeRequest(BaseModel):
 class RecipeResponse(BaseModel):
     recipe_ids: List[int] 
 
+
 @app.post("/recipes/recommend/ai", response_model=RecipeResponse)
 async def recommend_recipes(request: RecipeRequest):
-    ingredients = request.selectedItems
+    user_ingredients = request.selectedItems 
 
-    # if not ingredients:
-    #     return {"recipe_ids": []}
-    
-    # 재료가 아예 없는 경우 방어
-    if not ingredients or len(ingredients) == 0:
-    # 우선 인기 레시피 3개 제공  여기서 조회수 조회애서 3개 주기
-        return {"recipe_ids": [1, 2, 3]}
+    if not user_ingredients:
+        return {"recipe_ids": []} 
 
-    user_ingredients = ", ".join(request.selectedItems)
-    query = f"{user_ingredients}을(를) 사용한 맛있는 요리 레시피를 추천해줘."
+    query = ", ".join(user_ingredients)
+    candidates = vectorstore.similarity_search(query, k=20)
 
-    print(f"📩 요청 검색어: {query}")
+    scored_recipes = []
 
-    results = vectorstore.similarity_search(query, k=3)
+    # Re-ranking
+    for doc in candidates:
+        db_ingredients_str = doc.metadata.get("ingredients", "") # DB에 있는 재료 문자열
+        
+        match_count = 0
+        
+        for user_item in user_ingredients:
+            if user_item in db_ingredients_str:
+                match_count += 1
+        
+        scored_recipes.append((match_count, doc))
 
-    ids = []
-    for doc in results:
+    scored_recipes.sort(key=lambda x: x[0], reverse=True)
+
+    final_ids = []
+    print(f"사용자 입력: {user_ingredients}")
+    print("재료 일치 순위 결과:")
+
+    for count, doc in scored_recipes[:9]: # 상위 9개만 이 부분 수정해야 함!
         rec_id = doc.metadata.get("recipe_video_id")
+        title = doc.metadata.get("video_title")
+        ingredients = doc.metadata.get("ingredients")
+        
+        print(f"[일치 {count}개] {title} (재료: {ingredients})")
+
         if rec_id is not None:
             try:
-                ids.append(int(rec_id))
+                if int(rec_id) not in final_ids:
+                    final_ids.append(int(rec_id))
             except ValueError:
                 pass
 
-    unique_ids = list(dict.fromkeys(ids))
-    print(f"📤 추천 결과(ID): {unique_ids}")
-
-    return {"recipe_ids": unique_ids}
+    return {"recipe_ids": final_ids}
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
-    print(f"❌ [에러 상세 내용] : {exc}") 
-    print(f"📩 [받은 데이터 본문]: {await request.body()}")
+    print(f"[에러 상세 내용] : {exc}") 
+    print(f"받은 데이터 본문]: {await request.body()}")
     return JSONResponse(
         status_code=422,
         content={"detail": exc.errors()},

@@ -16,3 +16,6 @@ chroma_db/
 # IDE
 .vscode/
 .idea/
+
+data/
+etl/*.csv
