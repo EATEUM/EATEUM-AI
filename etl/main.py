@@ -33,72 +33,75 @@ def main():
         df_mysql_cats = pd.read_sql("SELECT category_id, category_name FROM category", engine)
         cat_id_map = dict(zip(df_mysql_cats['category_name'], df_mysql_cats['category_id']))
         
-        print(f"✅ DB 연결 성공: 재료 {len(item_id_map)}개, 카테고리 {len(cat_id_map)}개 로드 완료")
+        print(f"✅ DB 연결 성공: 재료 {len(item_id_map)}개, 기존 카테고리 {len(cat_id_map)}개 로드 완료")
     except Exception as e:
-        print(f"❌ DB 연결 실패: {e}")
-        return
+        print(f"❌ DB 연결 실패 (데이터 전처리를 계속 진행합니다): {e}")
+        cat_id_map = {}
+        item_id_map = {}
 
     df_info = pd.read_csv(INFO_FILE_PATH)
     df_detail_raw = pd.read_csv(DETAIL_FILE_PATH)
+
+  
+    csv_categories = df_info['category_name'].fillna('기타').astype(str).str.strip().unique()
+    
+    current_max_id = max(cat_id_map.values()) if cat_id_map else 0
+    for cat_name in csv_categories:
+        if cat_name not in cat_id_map:
+            current_max_id += 1
+            cat_id_map[cat_name] = current_max_id
+    
+    df_cat_save = pd.DataFrame([{'category_id': v, 'category_name': k} for k, v in cat_id_map.items()])
+    df_cat_save.to_csv('clean_category.csv', index=False, encoding='utf-8-sig')
+    print(f"✅ clean_category.csv 생성 완료 (총 {len(df_cat_save)}개)")
+
 
     info_rename = {'title': 'video_title', 'url': 'video_url', 'thumbnail': 'thumbnail_url', 'views': 'view_count', 'id': 'recipe_video_id'}
     detail_rename = {'id': 'recipe_video_id', 'title': 'video_title'}
     df_info.rename(columns=info_rename, inplace=True)
     df_detail_raw.rename(columns=detail_rename, inplace=True)
 
-    df_detail_raw['recipe_video_id'] = pd.to_numeric(df_detail_raw['recipe_video_id'], errors='coerce')
-    df_detail = df_detail_raw.dropna(subset=['recipe_video_id']).copy()
-    df_detail['recipe_video_id'] = df_detail['recipe_video_id'].astype(int)
-    df_detail = df_detail.drop_duplicates(subset=['recipe_video_id'], keep='first')
-
-    df_info['recipe_video_id'] = pd.to_numeric(df_info['recipe_video_id'], errors='coerce')
+    for df in [df_info, df_detail_raw]:
+        df['recipe_video_id'] = pd.to_numeric(df['recipe_video_id'], errors='coerce')
+    
     df_info = df_info.dropna(subset=['recipe_video_id'])
-    df_info['recipe_video_id'] = df_info['recipe_video_id'].astype(int)
+    df_detail = df_detail_raw.dropna(subset=['recipe_video_id']).drop_duplicates(subset=['recipe_video_id'])
 
     merged_df = pd.merge(df_info, df_detail, on='recipe_video_id', how='left')
     
     if 'video_title_x' in merged_df.columns: merged_df['video_title'] = merged_df['video_title_x']
     if 'video_url_x' in merged_df.columns: merged_df['video_url'] = merged_df['video_url_x']
 
+
     recipe_item_rows = []
     excluded_items = set()
-
     for idx, row in merged_df.iterrows():
         if pd.isna(row['item_name']): continue
-        
-        current_items = [x.strip() for x in str(row['item_name']).split(',')]
-        
-        for item in current_items:
-            if item in item_id_map:
-                recipe_item_rows.append({
-                    'recipe_video_id': row['recipe_video_id'],
-                    'item_id': item_id_map[item]
-                })
+        items = [x.strip() for x in str(row['item_name']).split(',')]
+        for itm in items:
+            if itm in item_id_map:
+                recipe_item_rows.append({'recipe_video_id': int(row['recipe_video_id']), 'item_id': item_id_map[itm]})
             else:
-                excluded_items.add(item)
-
+                excluded_items.add(itm)
+    
     pd.DataFrame(recipe_item_rows).to_csv('clean_recipe_items.csv', index=False, encoding='utf-8-sig')
-    print(f"✅ clean_recipe_items.csv 생성 완료 (DB 매핑 적용)")
-    if excluded_items:
-        print(f"💡 제외된 재료(DB에 없음): {list(excluded_items)[:10]}...")
+    print(f"✅ clean_recipe_items.csv 생성 완료")
 
     step_rows = []
     for idx, row in merged_df.iterrows():
         json_str = row.get('steps_json') if 'steps_json' in row else row.get('recipe_json')
         if pd.isna(json_str) or str(json_str).strip() in ['[]', '']: continue
-
         try:
             clean_json = str(json_str).replace('```json', '').replace('```', '').strip()
             if clean_json.startswith('"') and clean_json.endswith('"'): clean_json = clean_json[1:-1]
             clean_json = clean_json.replace('""', '"')
-
             steps = json.loads(clean_json)
-            for step in steps:
+            for s in steps:
                 step_rows.append({
-                    'recipe_video_id': row['recipe_video_id'],
-                    'step_number': step.get('step', 0),
-                    'step_title': step.get('step_title', ''),
-                    'content': step.get('step_detail', step.get('description', ''))
+                    'recipe_video_id': int(row['recipe_video_id']),
+                    'step_number': s.get('step', 0),
+                    'step_title': s.get('step_title', ''),
+                    'content': s.get('step_detail', s.get('description', ''))
                 })
         except: pass
 
@@ -107,6 +110,7 @@ def main():
 
     video_df = merged_df.copy()
     
+    video_df['category_name'] = video_df['category_name'].fillna('기타').astype(str).str.strip()
     video_df['category_id'] = video_df['category_name'].map(cat_id_map)
     
     if 'duration' not in video_df.columns: video_df['duration'] = '00:00'
