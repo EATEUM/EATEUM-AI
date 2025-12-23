@@ -8,23 +8,28 @@ import yt_dlp
 from dotenv import load_dotenv
 from openai import OpenAI
 
-load_dotenv()
+# 1. 현재 파일(main.py)의 위치를 기준으로 경로 설정 (가장 안전함)
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__)) # whisper 폴더
+BASE_DIR = os.path.dirname(CURRENT_DIR)                # EATEUM-AI (상위) 폴더
+DATA_DIR = os.path.join(BASE_DIR, 'data')              # data 폴더
+ENV_PATH = os.path.join(BASE_DIR, '.env')              # .env 파일
+
+# .env 로드
+load_dotenv(dotenv_path=ENV_PATH)
 
 # API 키 확인
 api_key = os.getenv("OPENAI_API_KEY")
 api_base = os.getenv("OPENAI_API_BASE")
+
 if not api_key:
     print("⚠️ 오류: .env 파일에 OPENAI_API_KEY가 없습니다.")
     exit()
-else:
-    api_key = api_key.strip()
 
-client = OpenAI(api_key=api_key, base_url=api_base)
+client = OpenAI(api_key=api_key.strip(), base_url=api_base)
 
-# 입력/출력 파일 경로
-INPUT_CSV = 'data/recipes_data.csv'
-OUTPUT_CSV = 'data/completed_recipes.csv'
-
+# 입력/출력 파일 경로 (절대 경로 사용)
+INPUT_CSV = os.path.join(DATA_DIR, 'recipes_data.csv')
+OUTPUT_CSV = os.path.join(DATA_DIR, 'recipes_scraper.csv')
 
 def download_json_subtitles(url):
     """유튜브 자막 URL(JSON3 포맷)을 텍스트로 변환"""
@@ -32,7 +37,6 @@ def download_json_subtitles(url):
         res = requests.get(url)
         data = res.json()
         full_text = ""
-        # JSON 구조 파싱 (events -> segs -> utf8)
         for event in data.get('events', []):
             if 'segs' in event:
                 for seg in event['segs']:
@@ -43,187 +47,167 @@ def download_json_subtitles(url):
         return None
 
 def transcribe_audio_with_whisper(video_url):
-    """[필살기] 자막이 없을 때 오디오를 다운받아 AI(Whisper)가 받아쓰기"""
-    print("      🎤 자막 없음! 오디오 다운로드 및 Whisper 변환 시도...")
-    
-    # 임시 오디오 파일명
-    temp_audio = f"temp_{int(time.time())}"
+    """자막 없을 때 Whisper로 변환"""
+    print("      🎤 자막 없음! Whisper 변환 시도...")
+    # 임시 파일도 data 폴더에 저장 (권한 문제 방지)
+    temp_audio = os.path.join(DATA_DIR, f"temp_{int(time.time())}")
     
     ydl_opts = {
         'format': 'bestaudio/best',
-        'outtmpl': temp_audio, # 확장자는 아래 postprocessor가 붙임 (.mp3)
-        'postprocessors': [{
-            'key': 'FFmpegExtractAudio',
-            'preferredcodec': 'mp3',
-            'preferredquality': '128',
-        }],
+        'outtmpl': temp_audio,
+        'postprocessors': [{'key': 'FFmpegExtractAudio','preferredcodec': 'mp3','preferredquality': '128'}],
         'quiet': True,
         'no_warnings': True,
     }
 
     try:
-        # 1. 오디오 다운로드
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download([video_url])
         
         mp3_filename = temp_audio + ".mp3"
-
-        # 2. OpenAI Whisper API 호출
+        
         with open(mp3_filename, "rb") as audio_file:
             transcript = client.audio.transcriptions.create(
-                model="whisper-1", 
-                file=audio_file,
-                language="ko" # 한국어로 인식 유도
+                model="whisper-1", file=audio_file, language="ko"
             )
         
-        # 3. 임시 파일 삭제
-        if os.path.exists(mp3_filename):
-            os.remove(mp3_filename)
-            
+        if os.path.exists(mp3_filename): os.remove(mp3_filename)
         return transcript.text
-
     except Exception as e:
-        print(f"      ❌ Whisper 변환 실패: {e}")
-        # 파일이 남아있다면 삭제 시도
-        if os.path.exists(temp_audio + ".mp3"):
-            os.remove(temp_audio + ".mp3")
+        print(f"      ❌ Whisper 실패: {e}")
+        # 실패 시 잔여 파일 삭제
+        if os.path.exists(temp_audio + ".mp3"): os.remove(temp_audio + ".mp3")
         return ""
 
-def process_video(video_url):
-    """영상 URL 하나를 받아서 모든 정보를 추출하는 메인 함수"""
+def summarize_with_gpt(text):
+    """텍스트를 받아 요리 순서 JSON List로 변환"""
+    if not text or len(text) < 50: return "[]"
     
-    # yt-dlp 옵션: 메타데이터와 자막 정보만 가져오기 (다운로드 X)
+    template = """
+    너는 요리 레시피를 정리하는 전문 에디터 AI야.
+    제공된 [자막]을 분석해서 불필요한 사담(인사, 맛 평가, 광고 등)은 모두 제거하고, 핵심 '요리 과정'만 추출해줘.
+
+    [작성 규칙]
+    1. 반드시 아래 예시와 같은 **순수 JSON 리스트 포맷**만 출력할 것. (Markdown 코드 블록 사용 금지)
+    2. 전체 구조는 객체들의 리스트(`[...]`)여야 한다.
+    3. 'step_title'은 해당 단계의 핵심 행동을 10글자 내외로 요약.
+    4. 'step_detail'은 구체적인 행동과 재료 손질법, 조리 시간을 포함하여 명확한 문장으로 서술.
+    5. 재료 손질 과정이 있다면 **반드시 1번 스텝**에 모아서 정리할 것.
+
+    [출력 예시]
+    [
+        {{"step": 1, "step_title": "재료 손질", "step_detail": "양파는 채 썰고 대파는 송송 썰어 준비합니다."}},
+        {{"step": 2, "step_title": "재료 볶기", "step_detail": "달궈진 팬에 식용유를 두르고 손질한 야채를 중불에서 볶습니다."}},
+        {{"step": 3, "step_title": "양념 하기", "step_detail": "간장 2스푼과 설탕 1스푼을 넣고 골고루 섞어줍니다."}}
+    ]
+
+    ---
+    [자막]
+    {transcript}
+    """
+    
+    formatted_prompt = template.format(transcript=text[:25000])
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[{"role": "user", "content": formatted_prompt}],
+            temperature=0
+        )
+        
+        content = response.choices[0].message.content.strip()
+
+        if content.startswith("```"):
+            content = content.split("\n", 1)[1]
+            if content.endswith("```"):
+                content = content.rsplit("\n", 1)[0]
+        
+        return content.strip()
+        
+    except Exception as e:
+        print(f"      ⚠️ GPT 요약 실패: {e}")
+        return "[]"
+
+def process_video(video_url, recipe_video_id):
     ydl_opts = {
         'skip_download': True,
         'writesubtitles': True,
-        'writeautomaticsub': True, # 자동 생성 자막도 OK
+        'writeautomaticsub': True,
         'subtitleslangs': ['ko', 'en'],
         'quiet': True,
         'no_warnings': True,
     }
 
     transcript_text = ""
-    video_data = {}
+    video_data = {
+        'recipe_video_id': recipe_video_id,
+        'video_title': None,
+        'video_url': video_url,
+        'thumbnail_url': None,
+        'view_count': 0,
+        'duration': "0:00",
+        'steps_json': "[]"
+    }
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(video_url, download=False)
             
-            # 1️⃣ 메타데이터 추출 (Java가 할 필요 없음)
-            video_data = {
-                'video_id': info.get('id'),
-                'title': info.get('title'),
-                'channel_name': info.get('uploader'),
-                'thumbnail_url': info.get('thumbnail'), # 고화질 자동 선택
-                'view_count': info.get('view_count'),
-                'upload_date': info.get('upload_date'),
-                'video_url': video_url,
-                'duration': info.get('duration_string')
-            }
+            video_data['video_title'] = info.get('title')
+            video_data['thumbnail_url'] = info.get('thumbnail')
+            video_data['view_count'] = info.get('view_count')
+            video_data['duration'] = info.get('duration_string')
 
-            # 2️⃣ 자막(Transcript) 추출 시도
             captions = info.get('requested_subtitles')
             if captions:
-                # 한국어 -> 영어 순으로 URL 찾기
                 sub_url = captions.get('ko', {}).get('url')
-                if not sub_url:
-                    sub_url = captions.get('en', {}).get('url')
-                
-                if sub_url:
-                    transcript_text = download_json_subtitles(sub_url)
+                if not sub_url: sub_url = captions.get('en', {}).get('url')
+                if sub_url: transcript_text = download_json_subtitles(sub_url)
 
     except Exception as e:
-        print(f"   ⚠️ yt-dlp 정보 추출 에러: {e}")
+        print(f"   ⚠️ yt-dlp 에러: {e}")
         return None
 
-    # 3️⃣ [Plan B] 자막을 못 구했으면? Whisper 출동!
     if not transcript_text:
         transcript_text = transcribe_audio_with_whisper(video_url)
 
-    # 4️⃣ GPT로 요리 순서 요약
     if transcript_text:
+        print(f"      ✅ 자막 확보! ({len(transcript_text)}자) GPT 요약 중...")
         steps_json = summarize_with_gpt(transcript_text)
-        video_data['recipe_steps'] = steps_json # JSON 문자열 형태
-        video_data['full_transcript'] = transcript_text[:1000] + "..." # 로그용(생략 가능)
+        video_data['steps_json'] = steps_json
     else:
-        video_data['recipe_steps'] = "[]"
-        print("      ❌ 내용 추출 실패 (자막도 없고 오디오 변환도 실패)")
+        print("      ❌ 자막/오디오 추출 실패")
 
     return video_data
 
-def summarize_with_gpt(text):
-    """텍스트를 받아 요리 순서 JSON으로 변환"""
-    if len(text) < 50: return "[]"
-    
-    prompt = f"""
-    아래 요리 영상 내용을 바탕으로 '요리 순서'만 JSON으로 정리해줘.
-    [규칙]
-    1. 불필요한 인사말, 잡담 제거.
-    2. 단계별로 명확하게 설명.
-    3. JSON 포맷 준수: {{ "steps": [ {{ "step": 1, "desc": "설명" }} ] }}
-    
-    [내용]
-    {text[:15000]}
-    """
-    
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o",
-            messages=[{"role": "user", "content": prompt}],
-            response_format={"type": "json_object"}
-        )
-        return response.choices[0].message.content
-    except Exception as e:
-        print(f"      ⚠️ GPT 요약 실패: {e}")
-        return "[]"
-
-
 if __name__ == "__main__":
-    # CSV 로드
-    try:
+    if os.path.exists(INPUT_CSV):
         df = pd.read_csv(INPUT_CSV)
-        print(f"📂 총 {len(df)}개의 레시피 URL을 로드했습니다.")
-    except FileNotFoundError:
-        print(f"❌ 입력 파일({INPUT_CSV})이 없습니다.")
+        print(f"📂 총 {len(df)}개의 레시피 URL 로드")
+    else:
+        print(f"❌ '{INPUT_CSV}' 파일 없음")
+        print("💡 data 폴더에 recipes_data.csv 파일을 넣어주세요.")
         exit()
 
-    results = []
-    
     for idx, row in df.iterrows():
         url = row.get('video_url')
+        rec_id = row.get('recipe_video_id')
         
-        # URL 없으면 패스
-        if not url or pd.isna(url): 
-            continue
+        if not url or pd.isna(url): continue
             
-        print(f"\n▶️ [{idx+1}/{len(df)}] 처리 중: {url}")
+        print(f"\n▶️ [{idx+1}/{len(df)}] 처리 중: {row.get('video_title', '제목없음')}")
         
-        # --- 핵심 처리 ---
-        data = process_video(url)
-        # ----------------
+        data = process_video(url, rec_id)
         
         if data:
-            # 기존 CSV의 ID가 있다면 유지
-            if 'recipe_video_id' in row:
-                data['recipe_video_id'] = row['recipe_video_id']
+            df_save = pd.DataFrame([data])
+            if not os.path.exists(OUTPUT_CSV):
+                df_save.to_csv(OUTPUT_CSV, index=False, mode='w', encoding='utf-8-sig')
+            else:
+                df_save.to_csv(OUTPUT_CSV, index=False, mode='a', header=False, encoding='utf-8-sig')
             
-            results.append(data)
-            print("   ✅ 처리 완료!")
+            print("   ✅ 저장 완료!")
         
-        # 차단 방지용 랜덤 대기 (3~7초)
-        time.sleep(random.uniform(10, 20))
+        time.sleep(random.uniform(5, 10))
 
-    # 결과 저장
-    if results:
-        final_df = pd.DataFrame(results)
-        
-        # 컬럼 순서 예쁘게 정렬
-        cols = ['recipe_video_id', 'video_id', 'title', 'channel_name', 'thumbnail_url', 'recipe_steps', 'video_url', 'view_count']
-        # 실제 있는 컬럼만 필터링
-        existing_cols = [c for c in cols if c in final_df.columns]
-        final_df = final_df[existing_cols]
-        
-        final_df.to_csv(OUTPUT_CSV, index=False, encoding='utf-8-sig')
-        print(f"\n🎉 모든 작업 끝! '{OUTPUT_CSV}' 파일 확인해보세요.")
-    else:
-        print("\n⚠️ 저장할 데이터가 없습니다.")
+    print(f"\n🎉 작업 완료! '{OUTPUT_CSV}' 확인.")
