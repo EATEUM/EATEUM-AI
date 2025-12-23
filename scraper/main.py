@@ -21,14 +21,18 @@ api_base = os.getenv("OPENAI_API_BASE")
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
-OUTPUT_FILE = os.path.join(DATA_DIR, 'recipes_scraper.csv')
 
-# 테스트용 데이터
-csv_data = """recipe_video_id,video_title,video_url
-1,한국 길거리 음식 NO.1 떡볶이,https://www.youtube.com/watch?v=t4Es8mwdYlE
-2,양배추전으로 살 10kg 그냥 뺍니다,https://www.youtube.com/watch?v=cUQzxhmYdGs
-3,이연복의 칠리새우,https://youtu.be/HHxrciV2-MU?si=HscScOOJa-OT7NVC"""
-df = pd.read_csv(StringIO(csv_data))
+INPUT_FILE = os.path.join(DATA_DIR, 'recipes_data.csv')  # 읽어올 파일
+OUTPUT_FILE = os.path.join(DATA_DIR, 'recipes_scraper.csv') # 저장할 파일
+
+# --- [수정된 부분] 실제 데이터 로드 ---
+if os.path.exists(INPUT_FILE):
+    df = pd.read_csv(INPUT_FILE)
+    print(f"📂 원본 데이터({INPUT_FILE}) 로드 완료: 총 {len(df)}개")
+else:
+    print(f"❌ 오류: '{INPUT_FILE}' 파일이 없습니다.")
+    exit()
+# -----------------------------------
 
 def get_video_id(url):
     video_id = None
@@ -114,20 +118,28 @@ def format_recipe_with_gpt(raw_transcript):
         return "자막 없음"
 
     llm = ChatOpenAI(
-        model="gpt-4o-mini", 
+        model="gpt-4o", 
         temperature=0,
         api_key=api_key,
         base_url=api_base
     )
 
     template = """
-    너는 요리 레시피 정리 앱의 백엔드 AI야.
-    아래 [자막]을 읽고 JSON으로 정리해줘. 잡담은 빼고 요리 과정만 남겨.
-    
-    [출력 예시 JSON]
+    너는 요리 레시피를 정리하는 전문 에디터 AI야.
+    제공된 [자막]을 분석해서 불필요한 사담(인사, 맛 평가, 광고 등)은 모두 제거하고, 핵심 '요리 과정'만 추출해줘.
+
+    [작성 규칙]
+    1. 반드시 아래의 순수 JSON 리스트 포맷만 출력할 것. (Markdown 코드 블록 사용 금지)
+    2. 전체 구조는 객체들의 리스트(`[...]`)여야 한다.
+    3. 'step_title'은 해당 단계의 핵심 행동을 10글자 내외로 요약.
+    4. 'step_detail'은 구체적인 행동과 재료 손질법, 조리 시간을 포함하여 명확한 문장으로 서술.
+    5. 재료 손질 과정이 있다면 1번 스텝에 모아서 정리할 것.
+
+    [출력 예시]
     [
-        {{"step": 1, "step_title": "재료 손질", "step_detail": "양파는 채 썰고 파는 다집니다."}},
-        {{"step": 2, "step_title": "볶기", "step_detail": "팬에 기름을 두르고 볶습니다."}}
+        {{"step": 1, "step_title": "재료 손질", "step_detail": "양파는 채 썰고 대파는 송송 썰어 준비합니다."}},
+        {{"step": 2, "step_title": "재료 볶기", "step_detail": "달궈진 팬에 식용유를 두르고 손질한 야채를 중불에서 볶습니다."}},
+        {{"step": 3, "step_title": "양념 하기", "step_detail": "간장 2스푼과 설탕 1스푼을 넣고 골고루 섞어줍니다."}}
     ]
 
     ---
@@ -175,13 +187,13 @@ if __name__ == "__main__":
         thumbnail_url = f"https://img.youtube.com/vi/{vid_id}/maxresdefault.jpg" if vid_id else ""
 
         data = {
-            'id': row['recipe_video_id'],
-            'title': row['video_title'],
-            'url': row['video_url'],
-            'thumbnail': thumbnail_url,
+            'recipe_video_id': row.get('recipe_video_id'),  # id -> recipe_video_id
+            'video_title': row.get('video_title'),          # title -> video_title
+            'video_url': row.get('video_url'),                          # url -> video_url
+            'thumbnail_url': thumbnail_url,                 # thumbnail -> thumbnail_url
             'view_count': info['view_count'],
             'duration': info['duration'],
-            'recipe_json': gpt_result
+            'steps_json': gpt_result                        # recipe_json -> steps_json
         }
         
         df_save = pd.DataFrame([data])

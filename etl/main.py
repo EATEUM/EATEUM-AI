@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-INFO_FILE_PATH = '../data/recipes_test.csv'       
+INFO_FILE_PATH = '../data/recipes_data.csv'       
 DETAIL_FILE_PATH = '../data/recipes_scraper_test.csv' 
 
 DB_USER = os.getenv("DB_USER")
