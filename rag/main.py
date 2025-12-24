@@ -7,10 +7,25 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_chroma import Chroma
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
 app = FastAPI()
+
+
+origins = [
+    "*", # 모든 주소 허용 (핸드폰, 프론트엔드 등)
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"], # GET, POST 등 모든 메서드 허용
+    allow_headers=["*"], # 모든 헤더 허용
+)
+
 
 db_path = "./chroma_db"
 api_key = os.getenv("OPENAI_API_KEY")
