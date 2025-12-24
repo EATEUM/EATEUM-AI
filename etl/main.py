@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 INFO_FILE_PATH = '../data/recipes_data.csv'       
-DETAIL_FILE_PATH = '../data/recipes_scraper_test.csv' 
+DETAIL_FILE_PATH = '../data/recipes_scraper.csv' 
 
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
@@ -42,8 +42,7 @@ def main():
     df_info = pd.read_csv(INFO_FILE_PATH)
     df_detail_raw = pd.read_csv(DETAIL_FILE_PATH)
 
-  
-    csv_categories = df_info['category_name'].fillna('기타').astype(str).str.strip().unique()
+    csv_categories = df_info['category_name'].dropna().astype(str).str.strip().unique()
     
     current_max_id = max(cat_id_map.values()) if cat_id_map else 0
     for cat_name in csv_categories:
