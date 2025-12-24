@@ -14,13 +14,28 @@ api_base = os.getenv("OPENAI_API_BASE")
 print(f"🔑 OpenAI API 연동 준비 중...")
 
 # 파일 경로 설정 (데이터 파일이 같은 폴더에 있어야 합니다)
-data_path = "recipes_data.csv"
-scraper_path = "recipes_scraper.csv"
+data_path = "../data/recipes_data.csv"
+scraper_path = "../data/recipes_scraper.csv"
 
 try:
     # 1. 두 가지 데이터 소스 로드
     df_data = pd.read_csv(data_path)
     df_scraper = pd.read_csv(scraper_path)
+
+    # ---------------------------------------------------------
+    # [추가] 두 데이터프레임의 ID 컬럼을 숫자형(int64)으로 강제 변환
+    # errors='coerce'를 사용하면 숫자가 아닌 값은 NaN으로 변환됩니다.
+    df_data['recipe_video_id'] = pd.to_numeric(df_data['recipe_video_id'], errors='coerce')
+    df_scraper['recipe_video_id'] = pd.to_numeric(df_scraper['recipe_video_id'], errors='coerce')
+
+    # ID가 없는(NaN) 행은 병합이 불가능하므로 제거합니다.
+    df_data = df_data.dropna(subset=['recipe_video_id'])
+    df_scraper = df_scraper.dropna(subset=['recipe_video_id'])
+
+    # 타입을 int64로 명확하게 지정
+    df_data['recipe_video_id'] = df_data['recipe_video_id'].astype(int)
+    df_scraper['recipe_video_id'] = df_scraper['recipe_video_id'].astype(int)
+    # ---------------------------------------------------------
     
     # 2. 데이터 병합 (recipe_video_id 기준)
     # scraper 데이터에서 조리과정(steps_json)과 썸네일을 가져와 합칩니다.
@@ -61,7 +76,9 @@ print(f"🚀 총 {len(docs)}개의 문서 벡터화 시작 (text-embedding-3-sma
 embedding_model = OpenAIEmbeddings(
     openai_api_key=api_key,
     openai_api_base=api_base,
-    model="text-embedding-3-small" 
+    model="text-embedding-3-small",
+    # 한 번에 요청할 데이터 개수를 제한합니다 (기본값은 1000이지만, 10~50 정도로 줄여보세요)
+    chunk_size=10 
 )
 
 persist_directory = "./chroma_db"
