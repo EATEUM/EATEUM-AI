@@ -1,31 +1,33 @@
 # --- 기본 데이터 처리 ---
-pandas>=2.0.0
-python-dotenv>=1.0.0
-requests>=2.31.0
+pandas==2.3.3
+python-dotenv==1.2.1
+requests==2.32.5
 
 # --- 웹 크롤링 & 유튜브 ---
 # Selenium 4.15 이상 필수 (드라이버 자동 관리 기능 포함)
-selenium>=4.15.0
-webdriver-manager>=4.0.0
-google-api-python-client>=2.100.0
-isodate>=0.6.1
-yt-dlp>=2023.10.13
+selenium==4.39.0
+webdriver-manager==4.0.2
+google-api-python-client==2.187.0
+isodate==0.7.2
+yt-dlp==2025.12.8
+youtube-transcript-api==1.2.3
 
 # --- AI & LangChain (RAG, Whisper) ---
 # 최신 LangChain 패키지 구조 반영
-openai>=1.0.0
-langchain>=0.2.0
-langchain-openai>=0.1.7
-langchain-community>=0.2.0
-langchain-chroma>=0.1.0
-chromadb>=0.5.0
+openai==2.11.0
+langchain==1.1.3
+langchain-openai==1.1.1
+langchain-community==0.4.1
+langchain-chroma==1.1.0
+langchain-core==1.1.3
+chromadb==1.3.6
 
 # --- API 서버 (FastAPI) ---
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
-pydantic>=2.5.0
-python-multipart>=0.0.6
+fastapi==0.124.2
+uvicorn[standard]==0.38.0
+pydantic==2.12.5
+python-multipart==0.0.21
 
 # --- 데이터베이스 (MySQL) ---
-sqlalchemy>=2.0.0
-pymysql>=1.1.0
+sqlalchemy==2.0.45
+pymysql==1.1.2
